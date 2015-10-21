@@ -9,9 +9,9 @@
 import Foundation
 
 public func ianKeenTwoSum(numbers: [Int], target: Int) -> (Int, Int)? {
-    for digit in numbers {
-        if (numbers.contains(target - digit)) {
-            return (Int(numbers.indexOf(digit)!) + 1, Int(numbers.indexOf((target - digit))!) + 1)
+    for (index, digit) in numbers.enumerate() {
+        if let other = numbers.indexOf(target - digit) {
+            return (index + 1, Int(other) + 1)
         }
     }
     return nil
