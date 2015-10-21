@@ -22,7 +22,7 @@ class TwoSomeTests: XCTestCase {
     
     func evaluateResult(twoSumFunction: ([Int], Int) -> (first: Int, second: Int)?) {
         let target = 9
-        let count = 10
+        let count = 1000
         let numbers = generateNumbers(count: count, target: target)
         let result = twoSumFunction(numbers, target)
         
