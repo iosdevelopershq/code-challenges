@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import CodeChallange
 
 class TwoSomeTests: XCTestCase {
     
@@ -43,5 +44,9 @@ class TwoSomeTests: XCTestCase {
     
     func testIanKeenTwoSum() {
         measureBlock { self.evaluateResult(ianKeenTwoSum) }
+    }
+    
+    func testLoganTwoSum() {
+        measureBlock { self.evaluateResult(loganTwoSum) }
     }
 }
