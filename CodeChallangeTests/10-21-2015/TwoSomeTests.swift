@@ -36,5 +36,8 @@ class TwoSomeTests: XCTestCase {
     func testAryaxtTwoSum() {
         measureBlock { self.evaluateResult(aryaxtTwoSum) }
     }
-    
+
+	func testNuudlesTwoSum() {
+		measureBlock { self.evaluateResult(nuudlesTwoSum) }
+	}
 }
