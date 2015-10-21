@@ -4,7 +4,7 @@ Weekly(?) code challenges for the community to complete for learning and fun.
 # Instructions
 * Fork the repository
 * Open the Xcode project in the forked repo
-* Drag your file under the <Date> folder named `<YourName><ChallengeName>Solution.swift`
+* Drag your file under the `Date` folder and name it `<YourName><ChallengeName>Solution.swift`
 * Make sure your function name is `<YourName><ChallengeName>Solution(…)`
 * Go to TwoSumTests.swift
 * add `func test<YourName>` function. Look at the other ones to see how.
