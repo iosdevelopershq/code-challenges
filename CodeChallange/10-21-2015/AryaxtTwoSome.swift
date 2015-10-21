@@ -12,7 +12,7 @@ import Foundation
 // This is the worst and slowest solution to this problem O(n^2), let's try to improve
 public func aryaxtTwoSum(numbers: [Int], targetNumber: Int) -> (Int, Int)? {
     for i in 0..<numbers.count-1 {
-        for j in 0..<numbers.count {
+        for j in i+1..<numbers.count {
             if numbers[i] + numbers[j] == targetNumber {
                 return (i+1, j+1)
             }
