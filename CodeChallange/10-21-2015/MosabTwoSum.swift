@@ -8,7 +8,7 @@
 
 import Foundation
 
-func twoSum(numbers : [Int], target : Int) -> (Int, Int)
+func mosabTwoSum(var numbers : [Int], target : Int) -> (Int, Int)?
 {
     var dictionary : [Int : Int] = [:] //Dictionary to hold numbers and indices
     
@@ -16,10 +16,10 @@ func twoSum(numbers : [Int], target : Int) -> (Int, Int)
         dictionary[number] = index
     }
     
-    return findIndices(&dictionary, numbers: numbers, target: target)
+    return findIndices(&dictionary, numbers: &numbers, target: target)
 }
 
-func findIndices(inout map : [Int:Int], let numbers : [Int], let target : Int) -> (Int, Int)
+func findIndices(inout map : [Int:Int], inout numbers : [Int], let target : Int) -> (Int, Int)?
 {
     for (index, number) in numbers.enumerate()
     {
@@ -30,5 +30,5 @@ func findIndices(inout map : [Int:Int], let numbers : [Int], let target : Int) -
         }
     }
     
-    return (-1, -1)
+    return nil
 }

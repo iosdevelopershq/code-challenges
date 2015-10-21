@@ -49,4 +49,8 @@ class TwoSomeTests: XCTestCase {
     func testLoganTwoSum() {
         measureBlock { self.evaluateResult(loganTwoSum) }
     }
+    
+    func testMosabTwoSum() {
+        measureBlock { self.evaluateResult(mosabTwoSum) }
+    }
 }
