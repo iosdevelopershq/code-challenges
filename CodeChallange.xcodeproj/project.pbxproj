@@ -172,7 +172,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
-				ORGANIZATIONNAME = aryaxt;
+				ORGANIZATIONNAME = iosdevelopers;
 				TargetAttributes = {
 					9272E1A31BD7F6560030B403 = {
 						CreatedOnToolsVersion = 7.0;
