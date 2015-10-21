@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		30B1279D1BD8094A008577BA /* NuudlesTwoSome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B1279C1BD8094A008577BA /* NuudlesTwoSome.swift */; };
 		30B1279E1BD80985008577BA /* NuudlesTwoSome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B1279C1BD8094A008577BA /* NuudlesTwoSome.swift */; };
+		321A3DC61BD80C35006D4AD3 /* IanKeenTwoSome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321A3DC51BD80C35006D4AD3 /* IanKeenTwoSome.swift */; settings = {ASSET_TAGS = (); }; };
+		321A3DC71BD80C9A006D4AD3 /* IanKeenTwoSome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321A3DC51BD80C35006D4AD3 /* IanKeenTwoSome.swift */; settings = {ASSET_TAGS = (); }; };
 		9272E1A81BD7F6560030B403 /* CodeChallange.h in Headers */ = {isa = PBXBuildFile; fileRef = 9272E1A71BD7F6560030B403 /* CodeChallange.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9272E1AF1BD7F6560030B403 /* CodeChallange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9272E1A41BD7F6560030B403 /* CodeChallange.framework */; };
 		9272E1D31BD7F8310030B403 /* TwoSomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9272E1D21BD7F8310030B403 /* TwoSomeTests.swift */; };
@@ -28,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		30B1279C1BD8094A008577BA /* NuudlesTwoSome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NuudlesTwoSome.swift; sourceTree = "<group>"; };
+		321A3DC51BD80C35006D4AD3 /* IanKeenTwoSome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IanKeenTwoSome.swift; sourceTree = "<group>"; };
 		9272E1A41BD7F6560030B403 /* CodeChallange.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CodeChallange.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9272E1A71BD7F6560030B403 /* CodeChallange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CodeChallange.h; sourceTree = "<group>"; };
 		9272E1A91BD7F6560030B403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -98,6 +101,7 @@
 			children = (
 				9272E1D41BD7FBD80030B403 /* AryaxtTwoSome.swift */,
 				30B1279C1BD8094A008577BA /* NuudlesTwoSome.swift */,
+				321A3DC51BD80C35006D4AD3 /* IanKeenTwoSome.swift */,
 			);
 			path = "10-21-2015";
 			sourceTree = "<group>";
@@ -220,6 +224,7 @@
 			files = (
 				9272E1D51BD7FBD80030B403 /* AryaxtTwoSome.swift in Sources */,
 				30B1279D1BD8094A008577BA /* NuudlesTwoSome.swift in Sources */,
+				321A3DC61BD80C35006D4AD3 /* IanKeenTwoSome.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				321A3DC71BD80C9A006D4AD3 /* IanKeenTwoSome.swift in Sources */,
 				9272E1D61BD7FBD80030B403 /* AryaxtTwoSome.swift in Sources */,
 				30B1279E1BD80985008577BA /* NuudlesTwoSome.swift in Sources */,
 				9272E1D31BD7F8310030B403 /* TwoSomeTests.swift in Sources */,

@@ -40,4 +40,8 @@ class TwoSomeTests: XCTestCase {
 	func testNuudlesTwoSum() {
 		measureBlock { self.evaluateResult(nuudlesTwoSum) }
 	}
+    
+    func testIanKeenTwoSum() {
+        measureBlock { self.evaluateResult(ianKeenTwoSum) }
+    }
 }
