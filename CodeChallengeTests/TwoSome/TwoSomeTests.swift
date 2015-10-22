@@ -9,23 +9,27 @@
 import XCTest
 @testable import CodeChallenge
 
+let target = 9
+let numbers: [Int] = {
+    let count = 1000
+    var numbers = [Int]()
+    for _ in 1...count {
+        // target / 3 so that no 2 of these can add together to make target
+        numbers.append(Int(arc4random_uniform(UInt32(target/3))))
+    }
+    
+    let min = (target / 2)
+    let max = (target - min)
+    numbers.insert(min, atIndex: Int(arc4random_uniform(UInt32(numbers.count))))
+    numbers.insert(max, atIndex: Int(arc4random_uniform(UInt32(numbers.count))))
+    return numbers
+}()
+
 class TwoSomeTests: XCTestCase {
     
     // MARK: - Helper -
     
-    func generateNumbers(count count: Int, target: Int) -> [Int] {
-        var numbers = Array<Int>(count: count, repeatedValue: 1)
-        let min = (target / 2)
-        let max = (target - min)
-        numbers.insert(min, atIndex: Int(arc4random_uniform(UInt32(numbers.count))))
-        numbers.insert(max, atIndex: Int(arc4random_uniform(UInt32(numbers.count))))
-        return numbers
-    }
-    
     func evaluateResult(twoSumFunction: ([Int], Int) -> (first: Int, second: Int)?) {
-        let target = 9
-        let count = 1000
-        let numbers = generateNumbers(count: count, target: target)
         let result = twoSumFunction(numbers, target)
         
         XCTAssertNotNil(result)
@@ -43,8 +47,7 @@ class TwoSomeTests: XCTestCase {
 	}
     
     func testIanKeenTwoSum() {
-        //Pulling out due to _poor_ performance on this dataset :(
-        //measureBlock { self.evaluateResult(ianKeenTwoSum) }
+        measureBlock { self.evaluateResult(ianKeenTwoSum) }
     }
     
     func testLoganTwoSum() {
