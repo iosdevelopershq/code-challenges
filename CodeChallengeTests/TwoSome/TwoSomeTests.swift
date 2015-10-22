@@ -17,7 +17,8 @@ class TwoSomeTests: XCTestCase {
         var numbers = Array<Int>(count: count, repeatedValue: 1)
         let min = (target / 2)
         let max = (target - min)
-        numbers += [min, 1, max]
+        numbers.insert(min, atIndex: Int(arc4random_uniform(UInt32(numbers.count))))
+        numbers.insert(max, atIndex: Int(arc4random_uniform(UInt32(numbers.count))))
         return numbers
     }
     
@@ -28,8 +29,7 @@ class TwoSomeTests: XCTestCase {
         let result = twoSumFunction(numbers, target)
         
         XCTAssertNotNil(result)
-        XCTAssertTrue(result!.first == count+1)
-        XCTAssertTrue(result!.second == count+3)
+        XCTAssertTrue(numbers[result!.first - 1] + numbers[result!.second - 1] == target)
     }
     
     // MARK: - User Tests -
