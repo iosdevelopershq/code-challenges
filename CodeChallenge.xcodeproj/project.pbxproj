@@ -14,6 +14,7 @@
 		9272E1AF1BD7F6560030B403 /* CodeChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9272E1A41BD7F6560030B403 /* CodeChallenge.framework */; };
 		9272E1D31BD7F8310030B403 /* TwoSomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9272E1D21BD7F8310030B403 /* TwoSomeTests.swift */; };
 		9272E1D51BD7FBD80030B403 /* AryaxtTwoSome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9272E1D41BD7FBD80030B403 /* AryaxtTwoSome.swift */; };
+		945DAAD01BD93EBD0034610E /* AranasaurusTwoSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAACF1BD93EBD0034610E /* AranasaurusTwoSum.swift */; settings = {ASSET_TAGS = (); }; };
 		CECD260D1BD81E7800C0296F /* MosabTwoSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD260C1BD81E7800C0296F /* MosabTwoSum.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		9272E1B51BD7F6560030B403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9272E1D21BD7F8310030B403 /* TwoSomeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoSomeTests.swift; sourceTree = "<group>"; };
 		9272E1D41BD7FBD80030B403 /* AryaxtTwoSome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AryaxtTwoSome.swift; sourceTree = "<group>"; };
+		945DAACF1BD93EBD0034610E /* AranasaurusTwoSum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AranasaurusTwoSum.swift; sourceTree = "<group>"; };
 		CECD260C1BD81E7800C0296F /* MosabTwoSum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MosabTwoSum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +107,7 @@
 				321A3DC51BD80C35006D4AD3 /* IanKeenTwoSome.swift */,
 				80CB63AD1BD8165200C77A39 /* LoganTwoSome.swift */,
 				CECD260C1BD81E7800C0296F /* MosabTwoSum.swift */,
+				945DAACF1BD93EBD0034610E /* AranasaurusTwoSum.swift */,
 			);
 			path = TwoSome;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				80CB63AE1BD8165200C77A39 /* LoganTwoSome.swift in Sources */,
 				30B1279D1BD8094A008577BA /* NuudlesTwoSome.swift in Sources */,
 				321A3DC61BD80C35006D4AD3 /* IanKeenTwoSome.swift in Sources */,
+				945DAAD01BD93EBD0034610E /* AranasaurusTwoSum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
