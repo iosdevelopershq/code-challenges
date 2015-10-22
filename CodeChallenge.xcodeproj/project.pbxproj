@@ -10,8 +10,8 @@
 		30B1279D1BD8094A008577BA /* NuudlesTwoSome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B1279C1BD8094A008577BA /* NuudlesTwoSome.swift */; };
 		321A3DC61BD80C35006D4AD3 /* IanKeenTwoSome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321A3DC51BD80C35006D4AD3 /* IanKeenTwoSome.swift */; settings = {ASSET_TAGS = (); }; };
 		80CB63AE1BD8165200C77A39 /* LoganTwoSome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CB63AD1BD8165200C77A39 /* LoganTwoSome.swift */; settings = {ASSET_TAGS = (); }; };
-		9272E1A81BD7F6560030B403 /* CodeChallange.h in Headers */ = {isa = PBXBuildFile; fileRef = 9272E1A71BD7F6560030B403 /* CodeChallange.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9272E1AF1BD7F6560030B403 /* CodeChallange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9272E1A41BD7F6560030B403 /* CodeChallange.framework */; };
+		9272E1A81BD7F6560030B403 /* CodeChallenge.h in Headers */ = {isa = PBXBuildFile; fileRef = 9272E1A71BD7F6560030B403 /* CodeChallenge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9272E1AF1BD7F6560030B403 /* CodeChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9272E1A41BD7F6560030B403 /* CodeChallenge.framework */; };
 		9272E1D31BD7F8310030B403 /* TwoSomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9272E1D21BD7F8310030B403 /* TwoSomeTests.swift */; };
 		9272E1D51BD7FBD80030B403 /* AryaxtTwoSome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9272E1D41BD7FBD80030B403 /* AryaxtTwoSome.swift */; };
 		CECD260D1BD81E7800C0296F /* MosabTwoSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD260C1BD81E7800C0296F /* MosabTwoSum.swift */; settings = {ASSET_TAGS = (); }; };
@@ -31,10 +31,10 @@
 		30B1279C1BD8094A008577BA /* NuudlesTwoSome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NuudlesTwoSome.swift; sourceTree = "<group>"; };
 		321A3DC51BD80C35006D4AD3 /* IanKeenTwoSome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IanKeenTwoSome.swift; sourceTree = "<group>"; };
 		80CB63AD1BD8165200C77A39 /* LoganTwoSome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoganTwoSome.swift; sourceTree = "<group>"; };
-		9272E1A41BD7F6560030B403 /* CodeChallange.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CodeChallange.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9272E1A71BD7F6560030B403 /* CodeChallange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CodeChallange.h; sourceTree = "<group>"; };
+		9272E1A41BD7F6560030B403 /* CodeChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CodeChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9272E1A71BD7F6560030B403 /* CodeChallenge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CodeChallenge.h; sourceTree = "<group>"; };
 		9272E1A91BD7F6560030B403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9272E1AE1BD7F6560030B403 /* CodeChallangeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeChallangeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9272E1AE1BD7F6560030B403 /* CodeChallenge.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeChallenge.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9272E1B51BD7F6560030B403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9272E1D21BD7F8310030B403 /* TwoSomeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoSomeTests.swift; sourceTree = "<group>"; };
 		9272E1D41BD7FBD80030B403 /* AryaxtTwoSome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AryaxtTwoSome.swift; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9272E1AF1BD7F6560030B403 /* CodeChallange.framework in Frameworks */,
+				9272E1AF1BD7F6560030B403 /* CodeChallenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,8 +63,8 @@
 		9272E19A1BD7F6560030B403 = {
 			isa = PBXGroup;
 			children = (
-				9272E1A61BD7F6560030B403 /* CodeChallange */,
-				9272E1B21BD7F6560030B403 /* CodeChallangeTests */,
+				9272E1A61BD7F6560030B403 /* CodeChallenge */,
+				9272E1B21BD7F6560030B403 /* CodeChallengeTests */,
 				9272E1A51BD7F6560030B403 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,32 +72,32 @@
 		9272E1A51BD7F6560030B403 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9272E1A41BD7F6560030B403 /* CodeChallange.framework */,
-				9272E1AE1BD7F6560030B403 /* CodeChallangeTests.xctest */,
+				9272E1A41BD7F6560030B403 /* CodeChallenge.framework */,
+				9272E1AE1BD7F6560030B403 /* CodeChallenge.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9272E1A61BD7F6560030B403 /* CodeChallange */ = {
+		9272E1A61BD7F6560030B403 /* CodeChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				9272E1C91BD7F8180030B403 /* 10-21-2015 */,
-				9272E1A71BD7F6560030B403 /* CodeChallange.h */,
+				9272E1C91BD7F8180030B403 /* TwoSome */,
+				9272E1A71BD7F6560030B403 /* CodeChallenge.h */,
 				9272E1A91BD7F6560030B403 /* Info.plist */,
 			);
-			path = CodeChallange;
+			path = CodeChallenge;
 			sourceTree = "<group>";
 		};
-		9272E1B21BD7F6560030B403 /* CodeChallangeTests */ = {
+		9272E1B21BD7F6560030B403 /* CodeChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				9272E1D11BD7F8310030B403 /* 10-21-2015 */,
+				9272E1D11BD7F8310030B403 /* TwoSome */,
 				9272E1B51BD7F6560030B403 /* Info.plist */,
 			);
-			path = CodeChallangeTests;
+			path = CodeChallengeTests;
 			sourceTree = "<group>";
 		};
-		9272E1C91BD7F8180030B403 /* 10-21-2015 */ = {
+		9272E1C91BD7F8180030B403 /* TwoSome */ = {
 			isa = PBXGroup;
 			children = (
 				9272E1D41BD7FBD80030B403 /* AryaxtTwoSome.swift */,
@@ -106,15 +106,15 @@
 				80CB63AD1BD8165200C77A39 /* LoganTwoSome.swift */,
 				CECD260C1BD81E7800C0296F /* MosabTwoSum.swift */,
 			);
-			path = "10-21-2015";
+			path = TwoSome;
 			sourceTree = "<group>";
 		};
-		9272E1D11BD7F8310030B403 /* 10-21-2015 */ = {
+		9272E1D11BD7F8310030B403 /* TwoSome */ = {
 			isa = PBXGroup;
 			children = (
 				9272E1D21BD7F8310030B403 /* TwoSomeTests.swift */,
 			);
-			path = "10-21-2015";
+			path = TwoSome;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,16 +124,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9272E1A81BD7F6560030B403 /* CodeChallange.h in Headers */,
+				9272E1A81BD7F6560030B403 /* CodeChallenge.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		9272E1A31BD7F6560030B403 /* CodeChallange */ = {
+		9272E1A31BD7F6560030B403 /* CodeChallenge */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9272E1B81BD7F6560030B403 /* Build configuration list for PBXNativeTarget "CodeChallange" */;
+			buildConfigurationList = 9272E1B81BD7F6560030B403 /* Build configuration list for PBXNativeTarget "CodeChallenge" */;
 			buildPhases = (
 				9272E19F1BD7F6560030B403 /* Sources */,
 				9272E1A01BD7F6560030B403 /* Frameworks */,
@@ -144,14 +144,14 @@
 			);
 			dependencies = (
 			);
-			name = CodeChallange;
+			name = CodeChallenge;
 			productName = CodeChallange;
-			productReference = 9272E1A41BD7F6560030B403 /* CodeChallange.framework */;
+			productReference = 9272E1A41BD7F6560030B403 /* CodeChallenge.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		9272E1AD1BD7F6560030B403 /* CodeChallangeTests */ = {
+		9272E1AD1BD7F6560030B403 /* CodeChallengeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9272E1BB1BD7F6560030B403 /* Build configuration list for PBXNativeTarget "CodeChallangeTests" */;
+			buildConfigurationList = 9272E1BB1BD7F6560030B403 /* Build configuration list for PBXNativeTarget "CodeChallengeTests" */;
 			buildPhases = (
 				9272E1AA1BD7F6560030B403 /* Sources */,
 				9272E1AB1BD7F6560030B403 /* Frameworks */,
@@ -162,9 +162,9 @@
 			dependencies = (
 				9272E1B11BD7F6560030B403 /* PBXTargetDependency */,
 			);
-			name = CodeChallangeTests;
+			name = CodeChallengeTests;
 			productName = CodeChallangeTests;
-			productReference = 9272E1AE1BD7F6560030B403 /* CodeChallangeTests.xctest */;
+			productReference = 9272E1AE1BD7F6560030B403 /* CodeChallenge.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -185,7 +185,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9272E19E1BD7F6560030B403 /* Build configuration list for PBXProject "CodeChallange" */;
+			buildConfigurationList = 9272E19E1BD7F6560030B403 /* Build configuration list for PBXProject "CodeChallenge" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -197,8 +197,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9272E1A31BD7F6560030B403 /* CodeChallange */,
-				9272E1AD1BD7F6560030B403 /* CodeChallangeTests */,
+				9272E1A31BD7F6560030B403 /* CodeChallenge */,
+				9272E1AD1BD7F6560030B403 /* CodeChallengeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -246,7 +246,7 @@
 /* Begin PBXTargetDependency section */
 		9272E1B11BD7F6560030B403 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9272E1A31BD7F6560030B403 /* CodeChallange */;
+			target = 9272E1A31BD7F6560030B403 /* CodeChallenge */;
 			targetProxy = 9272E1B01BD7F6560030B403 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -349,11 +349,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CodeChallange/Info.plist;
+				INFOPLIST_FILE = CodeChallenge/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.iosdevelopershq.CodeChallange;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iosdevelopershq.CodeChallenge;
+				PRODUCT_NAME = CodeChallenge;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -367,11 +367,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CodeChallange/Info.plist;
+				INFOPLIST_FILE = CodeChallenge/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.iosdevelopershq.CodeChallange;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iosdevelopershq.CodeChallenge;
+				PRODUCT_NAME = CodeChallenge;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -379,27 +379,29 @@
 		9272E1BC1BD7F6560030B403 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = CodeChallangeTests/Info.plist;
+				INFOPLIST_FILE = CodeChallengeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.iosdevelopershq.CodeChallangeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iosdevelopershq.CodeChallengeTests;
+				PRODUCT_MODULE_NAME = CodeChallengeTests;
+				PRODUCT_NAME = CodeChallenge;
 			};
 			name = Debug;
 		};
 		9272E1BD1BD7F6560030B403 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = CodeChallangeTests/Info.plist;
+				INFOPLIST_FILE = CodeChallengeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.iosdevelopershq.CodeChallangeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iosdevelopershq.CodeChallengeTests;
+				PRODUCT_MODULE_NAME = CodeChallengeTests;
+				PRODUCT_NAME = CodeChallenge;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9272E19E1BD7F6560030B403 /* Build configuration list for PBXProject "CodeChallange" */ = {
+		9272E19E1BD7F6560030B403 /* Build configuration list for PBXProject "CodeChallenge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9272E1B61BD7F6560030B403 /* Debug */,
@@ -408,7 +410,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9272E1B81BD7F6560030B403 /* Build configuration list for PBXNativeTarget "CodeChallange" */ = {
+		9272E1B81BD7F6560030B403 /* Build configuration list for PBXNativeTarget "CodeChallenge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9272E1B91BD7F6560030B403 /* Debug */,
@@ -417,7 +419,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9272E1BB1BD7F6560030B403 /* Build configuration list for PBXNativeTarget "CodeChallangeTests" */ = {
+		9272E1BB1BD7F6560030B403 /* Build configuration list for PBXNativeTarget "CodeChallengeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9272E1BC1BD7F6560030B403 /* Debug */,

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9272E1A31BD7F6560030B403"
-               BuildableName = "CodeChallange.framework"
-               BlueprintName = "CodeChallange"
-               ReferencedContainer = "container:CodeChallange.xcodeproj">
+               BuildableName = "CodeChallenge.framework"
+               BlueprintName = "CodeChallenge"
+               ReferencedContainer = "container:CodeChallenge.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9272E1AD1BD7F6560030B403"
-               BuildableName = "CodeChallangeTests.xctest"
-               BlueprintName = "CodeChallangeTests"
-               ReferencedContainer = "container:CodeChallange.xcodeproj">
+               BuildableName = "CodeChallenge.xctest"
+               BlueprintName = "CodeChallengeTests"
+               ReferencedContainer = "container:CodeChallenge.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9272E1A31BD7F6560030B403"
-            BuildableName = "CodeChallange.framework"
-            BlueprintName = "CodeChallange"
-            ReferencedContainer = "container:CodeChallange.xcodeproj">
+            BuildableName = "CodeChallenge.framework"
+            BlueprintName = "CodeChallenge"
+            ReferencedContainer = "container:CodeChallenge.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9272E1A31BD7F6560030B403"
-            BuildableName = "CodeChallange.framework"
-            BlueprintName = "CodeChallange"
-            ReferencedContainer = "container:CodeChallange.xcodeproj">
+            BuildableName = "CodeChallenge.framework"
+            BlueprintName = "CodeChallenge"
+            ReferencedContainer = "container:CodeChallenge.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -83,9 +83,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9272E1A31BD7F6560030B403"
-            BuildableName = "CodeChallange.framework"
-            BlueprintName = "CodeChallange"
-            ReferencedContainer = "container:CodeChallange.xcodeproj">
+            BuildableName = "CodeChallenge.framework"
+            BlueprintName = "CodeChallenge"
+            ReferencedContainer = "container:CodeChallenge.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

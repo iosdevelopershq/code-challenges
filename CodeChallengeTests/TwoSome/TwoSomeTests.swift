@@ -1,13 +1,13 @@
 //
-//  CodeChallangeTests.swift
-//  CodeChallangeTests
+//  CodeChallengeTests.swift
+//  CodeChallengeTests
 //
 //  Created by Aryan on 10/21/15.
 //  Copyright © 2015 iosdevelopers. All rights reserved.
 //
 
 import XCTest
-@testable import CodeChallange
+@testable import CodeChallenge
 
 class TwoSomeTests: XCTestCase {
     
