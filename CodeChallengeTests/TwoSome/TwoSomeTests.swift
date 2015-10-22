@@ -43,7 +43,8 @@ class TwoSomeTests: XCTestCase {
 	}
     
     func testIanKeenTwoSum() {
-        measureBlock { self.evaluateResult(ianKeenTwoSum) }
+        //Pulling out due to _poor_ performance on this dataset :(
+        //measureBlock { self.evaluateResult(ianKeenTwoSum) }
     }
     
     func testLoganTwoSum() {
