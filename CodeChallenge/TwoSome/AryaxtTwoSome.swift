@@ -1,6 +1,6 @@
 //
-//  Challange.swift
-//  CodeChallange
+//  Challenge.swift
+//  CodeChallenge
 //
 //  Created by Aryan on 10/21/15.
 //  Copyright © 2015 iosdevelopers. All rights reserved.

@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:CodeChallange.xcodeproj">
+      location = "self:/Users/aryaxt/Repos/code-challenges/CodeChallenge.xcodeproj">
    </FileRef>
 </Workspace>
