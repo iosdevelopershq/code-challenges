@@ -23,7 +23,6 @@ func findIndices(inout map : [Int:Int], inout numbers : [Int], let target : Int)
 {
     for (index, number) in numbers.enumerate()
     {
-        print(index)
         if let index2 = map[abs(number - target)]
         {
             return (index + 1, index2 + 1) //offset by 1 so we're not 0 based
