@@ -16,6 +16,7 @@
 		9272E1D51BD7FBD80030B403 /* AryaxtTwoSome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9272E1D41BD7FBD80030B403 /* AryaxtTwoSome.swift */; };
 		945DAAD01BD93EBD0034610E /* AranasaurusTwoSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAACF1BD93EBD0034610E /* AranasaurusTwoSum.swift */; settings = {ASSET_TAGS = (); }; };
 		CECD260D1BD81E7800C0296F /* MosabTwoSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD260C1BD81E7800C0296F /* MosabTwoSum.swift */; settings = {ASSET_TAGS = (); }; };
+		EA4BB5F41BD95653001FAF8E /* AlexPersianTwoSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4BB5F31BD95653001FAF8E /* AlexPersianTwoSum.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		9272E1D41BD7FBD80030B403 /* AryaxtTwoSome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AryaxtTwoSome.swift; sourceTree = "<group>"; };
 		945DAACF1BD93EBD0034610E /* AranasaurusTwoSum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AranasaurusTwoSum.swift; sourceTree = "<group>"; };
 		CECD260C1BD81E7800C0296F /* MosabTwoSum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MosabTwoSum.swift; sourceTree = "<group>"; };
+		EA4BB5F31BD95653001FAF8E /* AlexPersianTwoSum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlexPersianTwoSum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				80CB63AD1BD8165200C77A39 /* LoganTwoSome.swift */,
 				CECD260C1BD81E7800C0296F /* MosabTwoSum.swift */,
 				945DAACF1BD93EBD0034610E /* AranasaurusTwoSum.swift */,
+				EA4BB5F31BD95653001FAF8E /* AlexPersianTwoSum.swift */,
 			);
 			path = TwoSome;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			files = (
 				CECD260D1BD81E7800C0296F /* MosabTwoSum.swift in Sources */,
 				9272E1D51BD7FBD80030B403 /* AryaxtTwoSome.swift in Sources */,
+				EA4BB5F41BD95653001FAF8E /* AlexPersianTwoSum.swift in Sources */,
 				80CB63AE1BD8165200C77A39 /* LoganTwoSome.swift in Sources */,
 				30B1279D1BD8094A008577BA /* NuudlesTwoSome.swift in Sources */,
 				321A3DC61BD80C35006D4AD3 /* IanKeenTwoSome.swift in Sources */,

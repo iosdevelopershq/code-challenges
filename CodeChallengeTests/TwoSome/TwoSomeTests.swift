@@ -57,4 +57,8 @@ class TwoSomeTests: XCTestCase {
     func testAranasuarusTwoSum() {
         measureBlock { self.evaluateResult(aranasaurusTwoSum) }
     }
+    
+    func testAlexPersianTwoSum() {
+        measureBlock { self.evaluateResult(alexPersianTwoSum) }
+    }
 }
