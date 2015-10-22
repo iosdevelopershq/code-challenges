@@ -1,6 +1,6 @@
 //
 //  IanKeenTwoSome.swift
-//  CodeChallange
+//  CodeChallenge
 //
 //  Created by Ian Keen on 21/10/2015.
 //  Copyright © 2015 aryaxt. All rights reserved.

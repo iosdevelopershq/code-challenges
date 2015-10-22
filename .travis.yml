@@ -1,0 +1,5 @@
+language: objective-c
+osx_image: xcode7
+
+script:
+- xcodebuild -project CodeChallenge.xcodeproj -scheme CodeChallengeTests -destination 'platform=iOS Simulator,name=iPhone 6' test

@@ -1,6 +1,6 @@
 //
 //  NuudlesTwoSome.swift
-//  CodeChallange
+//  CodeChallenge
 //
 //  Created by Christopher Luu on 10/21/15.
 //  Copyright © 2015 aryaxt. All rights reserved.

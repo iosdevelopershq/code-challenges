@@ -1,6 +1,6 @@
 //
 //  LoganTwoSome.swift
-//  CodeChallange
+//  CodeChallenge
 //
 //  Created by Logan Wright on 10/21/15.
 //  Copyright © 2015 aryaxt. All rights reserved.
