@@ -31,32 +31,16 @@ func aranasaurusTwoSum(numbers: [Int], targetNumber: Int) -> (Int, Int)? {
     */
     
     var max = Datum(0, 0)
-    var lessThanHalf = [Datum]()
-    var moreThanHalf = [Datum]()
-    
     let mid = targetNumber / 2
     
     for (i, number) in numbers.enumerate() {
-        guard number >= 0 && number <= targetNumber else { continue }
-        
-        if number < mid {
-            lessThanHalf.append(Datum(i, number))
-        } else {
-            moreThanHalf.append(Datum(i, number))
-        }
+        guard number >= 0 && number <= targetNumber && number >= mid else { continue }
         
         if number > max.number {
+            if let diffIndex = numbers.indexOf(targetNumber - number) {
+                return (diffIndex + 1, i + 1)
+            }
             max = Datum(i, number)
-        }
-    }
-    
-    if let diffIndex = numbers.indexOf(targetNumber - max.number) {
-        return (diffIndex + 1, max.index + 1)
-    }
-    
-    for second in moreThanHalf {
-        if let diffIndex = numbers.indexOf(targetNumber - second.number) {
-            return (diffIndex + 1, second.index)
         }
     }
     
