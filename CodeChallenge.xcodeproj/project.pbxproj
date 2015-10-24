@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B96D7F11BD969970012891A /* BugKrushaTwoSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B96D7F01BD969970012891A /* BugKrushaTwoSum.swift */; settings = {ASSET_TAGS = (); }; };
+		1574B68A1BDC06CB00ABEFDF /* BugKrushaTwoSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1574B6891BDC06CB00ABEFDF /* BugKrushaTwoSum.swift */; settings = {ASSET_TAGS = (); }; };
 		30B1279D1BD8094A008577BA /* NuudlesTwoSome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B1279C1BD8094A008577BA /* NuudlesTwoSome.swift */; };
 		321A3DC61BD80C35006D4AD3 /* IanKeenTwoSome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321A3DC51BD80C35006D4AD3 /* IanKeenTwoSome.swift */; settings = {ASSET_TAGS = (); }; };
 		80CB63AE1BD8165200C77A39 /* LoganTwoSome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CB63AD1BD8165200C77A39 /* LoganTwoSome.swift */; settings = {ASSET_TAGS = (); }; };
@@ -31,7 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1B96D7F01BD969970012891A /* BugKrushaTwoSum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BugKrushaTwoSum.swift; path = ../../BugKrushaTwoSum.swift; sourceTree = "<group>"; };
+		1574B6891BDC06CB00ABEFDF /* BugKrushaTwoSum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BugKrushaTwoSum.swift; sourceTree = "<group>"; };
 		30B1279C1BD8094A008577BA /* NuudlesTwoSome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NuudlesTwoSome.swift; sourceTree = "<group>"; };
 		321A3DC51BD80C35006D4AD3 /* IanKeenTwoSome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IanKeenTwoSome.swift; sourceTree = "<group>"; };
 		80CB63AD1BD8165200C77A39 /* LoganTwoSome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoganTwoSome.swift; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 		9272E1C91BD7F8180030B403 /* TwoSome */ = {
 			isa = PBXGroup;
 			children = (
-				1B96D7F01BD969970012891A /* BugKrushaTwoSum.swift */,
+				1574B6891BDC06CB00ABEFDF /* BugKrushaTwoSum.swift */,
 				9272E1D41BD7FBD80030B403 /* AryaxtTwoSome.swift */,
 				30B1279C1BD8094A008577BA /* NuudlesTwoSome.swift */,
 				321A3DC51BD80C35006D4AD3 /* IanKeenTwoSome.swift */,
@@ -234,10 +234,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1574B68A1BDC06CB00ABEFDF /* BugKrushaTwoSum.swift in Sources */,
 				CECD260D1BD81E7800C0296F /* MosabTwoSum.swift in Sources */,
 				9272E1D51BD7FBD80030B403 /* AryaxtTwoSome.swift in Sources */,
 				EA4BB5F41BD95653001FAF8E /* AlexPersianTwoSum.swift in Sources */,
-				1B96D7F11BD969970012891A /* BugKrushaTwoSum.swift in Sources */,
 				80CB63AE1BD8165200C77A39 /* LoganTwoSome.swift in Sources */,
 				30B1279D1BD8094A008577BA /* NuudlesTwoSome.swift in Sources */,
 				321A3DC61BD80C35006D4AD3 /* IanKeenTwoSome.swift in Sources */,
