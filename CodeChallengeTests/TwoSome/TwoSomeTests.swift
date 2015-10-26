@@ -36,37 +36,4 @@ class TwoSomeTests: XCTestCase {
         XCTAssertTrue(numbers[result!.first - 1] + numbers[result!.second - 1] == target)
     }
     
-    // MARK: - User Tests -
-    
-    func testAryaxtTwoSum() {
-        measureBlock { self.evaluateResult(aryaxtTwoSum) }
-    }
-
-	func testNuudlesTwoSum() {
-		measureBlock { self.evaluateResult(nuudlesTwoSum) }
-	}
-    
-    func testIanKeenTwoSum() {
-        measureBlock { self.evaluateResult(ianKeenTwoSum) }
-    }
-    
-    func testLoganTwoSum() {
-        measureBlock { self.evaluateResult(loganTwoSum) }
-    }
-    
-    func testMosabTwoSum() {
-        measureBlock { self.evaluateResult(mosabTwoSum) }
-    }
-    
-    func testAranasuarusTwoSum() {
-        measureBlock { self.evaluateResult(aranasaurusTwoSum) }
-    }
-    
-    func testAlexPersianTwoSum() {
-        measureBlock { self.evaluateResult(alexPersianTwoSum) }
-    }
-    
-    func testBugKrushaTwoSum() {
-        measureBlock { self.evaluateResult(bugKrushaTwoSum) }
-    }
 }
