@@ -41,6 +41,10 @@ class TwoSomeTests: XCTestCase {
     func testAryaxtTwoSum() {
         measureBlock { self.evaluateResult(aryaxtTwoSum) }
     }
+    
+    func testAlexPersianTwoSum() {
+        measureBlock { self.evaluateResult(alexPersianTwoSum) }
+    }
 
 	func testNuudlesTwoSum() {
 		measureBlock { self.evaluateResult(nuudlesTwoSum) }
@@ -60,10 +64,6 @@ class TwoSomeTests: XCTestCase {
     
     func testAranasuarusTwoSum() {
         measureBlock { self.evaluateResult(aranasaurusTwoSum) }
-    }
-    
-    func testAlexPersianTwoSum() {
-        measureBlock { self.evaluateResult(alexPersianTwoSum) }
     }
     
     func testBugKrushaTwoSum() {
