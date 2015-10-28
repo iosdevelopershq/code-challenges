@@ -8,24 +8,16 @@
 
 import Foundation
 
-class NuudlesTwoSome: TwoSomeTests {
-    
-    func testTwoSum() {
-        measureBlock { self.evaluateResult(self.nuudlesTwoSum) }
-    }
-    
-    func nuudlesTwoSum(numbers: [Int], target: Int) -> (first: Int, second: Int)?
-    {
-        var numberToIndex: [Int: Int] = [:]
-        for (index, number) in numbers.enumerate()
-        {
-            if let pairIndex = numberToIndex[target - number]
-            {
-                return (first: pairIndex + 1, second: index + 1) // Why not 0 index? Silly
-            }
-            numberToIndex[number] = index
-        }
-        return nil
-    }
-    
+func nuudlesTwoSum(numbers: [Int], target: Int) -> (first: Int, second: Int)?
+{
+	var numberToIndex: [Int: Int] = [:]
+	for (index, number) in numbers.enumerate()
+	{
+		if let pairIndex = numberToIndex[target - number]
+		{
+			return (first: pairIndex + 1, second: index + 1) // Why not 0 index? Silly
+		}
+		numberToIndex[number] = index
+	}
+	return nil
 }
