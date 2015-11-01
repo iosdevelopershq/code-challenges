@@ -41,7 +41,8 @@ class CodeChallengeTestCase: XCTestCase {
             var name = result.name
             if name.characters.count < maxNameLength {
                 let diff = maxNameLength - name.characters.count
-                let tabsToInsert = Int(ceil(Double(diff)/Double(5)))
+                let tabWidth = 5
+                let tabsToInsert = Int(ceil(Double(diff)/Double(tabWidth)))
                 for _ in 1...tabsToInsert {
                     name.append(Character("\t"))
                 }
