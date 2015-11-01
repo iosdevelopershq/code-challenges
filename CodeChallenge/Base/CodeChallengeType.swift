@@ -43,19 +43,32 @@ struct CodeChallengeResult<ChallengeType: CodeChallengeType> {
     }
 }
 
-struct AccumulatedChallengeResult {
+struct AccumulatedChallengeResult<ChallengeType: CodeChallengeType> {
     let name: String
-    let totalTime: NSTimeInterval
-    let averageTime: NSTimeInterval
     let successes: Int
     let failures: Int
+    let results: [CodeChallengeResult<ChallengeType>]
+    let totalTime: NSTimeInterval
+    let averageTime: NSTimeInterval
+    
+    init(name: String, results: [CodeChallengeResult<ChallengeType>], successes: Int, failures: Int) {
+        self.name = name
+        self.results = results
+        self.successes = successes
+        self.failures = failures
+        self.totalTime = results.reduce(0) { $0 + $1.time }
+        self.averageTime = totalTime / Double(results.count)
+    }
+    
 }
 
 extension CodeChallengeType {
     private typealias ResultType = CodeChallengeResult<Self>
     private typealias OperationType = RunOperation<Self>
     
-    func runAll() -> [AccumulatedChallengeResult] {
+    typealias AccumulatedResultType = AccumulatedChallengeResult<Self>
+    
+    func runAll() -> [AccumulatedResultType] {
         let dataset = generateDataset()
         
         let workerQueue = NSOperationQueue()
@@ -72,6 +85,7 @@ extension CodeChallengeType {
             workers.appendContentsOf(iterations)
         }
         
+        print("Adding \(workers.count) operations to the queue and running them \(workerQueue.maxConcurrentOperationCount) at a time")
         workerQueue.addOperations(workers, waitUntilFinished: true)
         
         var resultsByName = [String: [ResultType]]()
@@ -82,12 +96,10 @@ extension CodeChallengeType {
             resultsByName[worker.entry.name]?.append(worker.result)
         }
         
-        var accumulatedResults = [AccumulatedChallengeResult]()
+        var accumulatedResults = [AccumulatedResultType]()
         for (name, results) in resultsByName {
-            let accumulatedTime = results.reduce(0) { $0 + $1.time }
             var successes = 0
             var failures = 0
-            let averageTime = accumulatedTime / Double(results.count)
             for result in results {
                 if verifyOutput(result.output, forInput: result.input) {
                     successes++
@@ -95,7 +107,7 @@ extension CodeChallengeType {
                     failures++
                 }
             }
-            let result = AccumulatedChallengeResult(name: name, totalTime: accumulatedTime, averageTime: averageTime, successes: successes, failures: failures)
+            let result = AccumulatedResultType(name: name, results: results, successes: successes, failures: failures)
             accumulatedResults.append(result)
         }
         return accumulatedResults.sort { $0.averageTime < $1.averageTime }

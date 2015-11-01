@@ -28,17 +28,17 @@ class CodeChallengeTestCase: XCTestCase {
         print(footingText)
     }
     
-    private func printResults(results: [AccumulatedChallengeResult]) {
+    private func printResults<ChallengeType: CodeChallengeType>(results: [AccumulatedChallengeResult<ChallengeType>]) {
         let maxNameLength = results.reduce(0) { max($0, $1.name.characters.count) }
         let formatter = NSNumberFormatter()
         formatter.numberStyle = .DecimalStyle
         formatter.minimumFractionDigits = 5
         formatter.maximumFractionDigits = 5
-        for (i, result) in results.enumerate() {
-            let total = result.successes + result.failures
-            let successRate = Double(result.successes) / Double(total)
+        for (i, accResult) in results.enumerate() {
+            let total = accResult.successes + accResult.failures
+            let successRate = Double(accResult.successes) / Double(total)
             
-            var name = result.name
+            var name = accResult.name
             if name.characters.count < maxNameLength {
                 let diff = maxNameLength - name.characters.count
                 let tabWidth = 5
@@ -47,7 +47,16 @@ class CodeChallengeTestCase: XCTestCase {
                     name.append(Character("\t"))
                 }
             }
-            print("\(i+1). \(name)\t avg: \(formatter.stringFromNumber(result.averageTime)!)s\ttotal: \(formatter.stringFromNumber(result.totalTime)!)s\t[\(successRate * 100)% success rate]")
+            print("\(i+1). \(name)\t avg: \(formatter.stringFromNumber(accResult.averageTime)!)s\ttotal: \(formatter.stringFromNumber(accResult.totalTime)!)s\t[\(successRate * 100)% success rate]")
+        }
+        print("=== Individual Run Times ===")
+        for (_, result) in results.enumerate() {
+            let times = result.results.map { "\(formatter.stringFromNumber($0.time)!)s" }
+            print("\(result.name):", separator: "", terminator: " ")
+            for (i, t) in times.enumerate() {
+                let sep = i == times.endIndex.predecessor() ? "\n" : ", "
+                print("\(t)\(sep)", separator: "", terminator: "")
+            }
         }
     }
 }
