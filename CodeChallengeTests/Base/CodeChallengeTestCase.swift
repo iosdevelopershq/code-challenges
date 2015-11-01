@@ -10,7 +10,11 @@ import XCTest
 @testable import CodeChallenge
 
 class CodeChallengeTestCase: XCTestCase {
+    /**
+     Run all of the entries for the given challenge and print the results as nicely as we can to the console.
+    */
     func runTestsForChallenge<ChallengeType: CodeChallengeType>(challenge: ChallengeType) {
+        // Do some formatting
         let charWidth = 116
         var headingText = "Calculating results for '\(challenge.title)'"
         let headingTextInnerCount = headingText.characters.count + 2
@@ -36,6 +40,7 @@ class CodeChallengeTestCase: XCTestCase {
         formatter.maximumFractionDigits = 5
         for (i, accResult) in results.enumerate() {
             var name = accResult.name
+            // try to make the results line up a bit by inserting the correct amount of tabs between the name and the avg based on the maximum name length vs this name's length
             if name.characters.count < maxNameLength {
                 let diff = maxNameLength - name.characters.count
                 let tabWidth = 5
