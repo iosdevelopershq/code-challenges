@@ -29,6 +29,7 @@ class CodeChallengeTestCase: XCTestCase {
     }
     
     private func printResults(results: [AccumulatedChallengeResult]) {
+        let maxNameLength = results.reduce(0) { max($0, $1.name.characters.count) }
         let formatter = NSNumberFormatter()
         formatter.numberStyle = .DecimalStyle
         formatter.minimumFractionDigits = 5
@@ -37,7 +38,15 @@ class CodeChallengeTestCase: XCTestCase {
             let total = result.successes + result.failures
             let successRate = Double(result.successes) / Double(total)
             
-            print("\(i+1). \(result.name) - \(formatter.stringFromNumber(result.time)!)s [\(successRate * 100)% success rate]")
+            var name = result.name
+            if name.characters.count < maxNameLength {
+                let diff = maxNameLength - name.characters.count
+                let tabsToInsert = Int(ceil(Double(diff)/Double(5)))
+                for _ in 1...tabsToInsert {
+                    name.append(Character("\t"))
+                }
+            }
+            print("\(i+1). \(name)\t avg: \(formatter.stringFromNumber(result.averageTime)!)s\ttotal: \(formatter.stringFromNumber(result.totalTime)!)s\t[\(successRate * 100)% success rate]")
         }
     }
 }

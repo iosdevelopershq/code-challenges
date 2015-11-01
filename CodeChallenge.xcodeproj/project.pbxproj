@@ -23,7 +23,6 @@
 		94350F781BE5F174003592FB /* Mosab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94350F771BE5F174003592FB /* Mosab.swift */; };
 		94350F7A1BE5F24A003592FB /* Nuudles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94350F791BE5F24A003592FB /* Nuudles.swift */; };
 		9489866A1BE5CFB000D34976 /* CodeChallengeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948986691BE5CFB000D34976 /* CodeChallengeType.swift */; };
-		9489866E1BE5D1F000D34976 /* CodeChallengeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9489866D1BE5D1F000D34976 /* CodeChallengeResult.swift */; };
 		948986701BE5D28500D34976 /* ExampleCodeChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9489866F1BE5D28500D34976 /* ExampleCodeChallenge.swift */; };
 		94FB98CA1BE1B5D800228845 /* TwoSumChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FB98C91BE1B5D800228845 /* TwoSumChallenge.swift */; };
 /* End PBXBuildFile section */
@@ -57,7 +56,6 @@
 		94350F771BE5F174003592FB /* Mosab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mosab.swift; sourceTree = "<group>"; };
 		94350F791BE5F24A003592FB /* Nuudles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nuudles.swift; sourceTree = "<group>"; };
 		948986691BE5CFB000D34976 /* CodeChallengeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeChallengeType.swift; sourceTree = "<group>"; };
-		9489866D1BE5D1F000D34976 /* CodeChallengeResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeChallengeResult.swift; sourceTree = "<group>"; };
 		9489866F1BE5D28500D34976 /* ExampleCodeChallenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleCodeChallenge.swift; sourceTree = "<group>"; };
 		94FB98C91BE1B5D800228845 /* TwoSumChallenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoSumChallenge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -190,7 +188,6 @@
 			isa = PBXGroup;
 			children = (
 				948986691BE5CFB000D34976 /* CodeChallengeType.swift */,
-				9489866D1BE5D1F000D34976 /* CodeChallengeResult.swift */,
 				9489866F1BE5D28500D34976 /* ExampleCodeChallenge.swift */,
 			);
 			path = Base;
@@ -312,7 +309,6 @@
 				9489866A1BE5CFB000D34976 /* CodeChallengeType.swift in Sources */,
 				94350F701BE5EE94003592FB /* Aryaxt.swift in Sources */,
 				948986701BE5D28500D34976 /* ExampleCodeChallenge.swift in Sources */,
-				9489866E1BE5D1F000D34976 /* CodeChallengeResult.swift in Sources */,
 				94350F741BE5F04A003592FB /* IanKeen.swift in Sources */,
 				94350F761BE5F0F6003592FB /* Logan.swift in Sources */,
 				94350F721BE5EF9F003592FB /* BugKrusha.swift in Sources */,

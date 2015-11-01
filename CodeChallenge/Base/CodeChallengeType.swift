@@ -29,9 +29,24 @@ struct CodeChallengeEntry<ChallengeType: CodeChallengeType> {
     }
 }
 
+struct CodeChallengeResult<ChallengeType: CodeChallengeType> {
+    let name: String
+    let input: ChallengeType.InputType
+    let output: ChallengeType.OutputType
+    let time: NSTimeInterval
+    
+    init(name: String, input: ChallengeType.InputType, output: ChallengeType.OutputType, time: NSTimeInterval) {
+        self.name = name
+        self.input = input
+        self.output = output
+        self.time = time
+    }
+}
+
 struct AccumulatedChallengeResult {
     let name: String
-    let time: NSTimeInterval
+    let totalTime: NSTimeInterval
+    let averageTime: NSTimeInterval
     let successes: Int
     let failures: Int
 }
@@ -48,8 +63,13 @@ extension CodeChallengeType {
         var workers = [OperationType]()
         
         for entry in entries {
-            let operations: [OperationType] = dataset.map { OperationType(entry: entry, input: $0) }
-            workers.appendContentsOf(operations)
+            var iterations = [OperationType]()
+            for input in dataset {
+                for _ in 1...10 {
+                    iterations.append(OperationType(entry: entry, input: input))
+                }
+            }
+            workers.appendContentsOf(iterations)
         }
         
         workerQueue.addOperations(workers, waitUntilFinished: true)
@@ -67,6 +87,7 @@ extension CodeChallengeType {
             let accumulatedTime = results.reduce(0) { $0 + $1.time }
             var successes = 0
             var failures = 0
+            let averageTime = accumulatedTime / Double(results.count)
             for result in results {
                 if verifyOutput(result.output, forInput: result.input) {
                     successes++
@@ -74,10 +95,10 @@ extension CodeChallengeType {
                     failures++
                 }
             }
-            let result = AccumulatedChallengeResult(name: name, time: accumulatedTime, successes: successes, failures: failures)
+            let result = AccumulatedChallengeResult(name: name, totalTime: accumulatedTime, averageTime: averageTime, successes: successes, failures: failures)
             accumulatedResults.append(result)
         }
-        return accumulatedResults.sort { $0.time < $1.time }
+        return accumulatedResults.sort { $0.averageTime < $1.averageTime }
     }
 }
 
