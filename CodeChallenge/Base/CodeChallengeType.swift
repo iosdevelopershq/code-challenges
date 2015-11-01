@@ -23,10 +23,6 @@ protocol CodeChallengeType {
 struct CodeChallengeEntry<ChallengeType: CodeChallengeType> {
     let name: String
     let block: (input: ChallengeType.InputType) -> ChallengeType.OutputType
-    init(name: String, block: (input: ChallengeType.InputType) -> ChallengeType.OutputType) {
-        self.name = name
-        self.block = block
-    }
 }
 
 struct CodeChallengeResult<ChallengeType: CodeChallengeType> {
