@@ -34,13 +34,18 @@ struct ExampleCodeChallenge: CodeChallengeType {
 // Challenge Entries
 
 let noobExampleEntry = CodeChallengeEntry<ExampleCodeChallenge>(name: "Crash Override") { input -> String in
-    for i in 1...10000 { }
+    for i in 1...10000 {
+        // Wait for the Gibson to come online.
+    }
+    
     guard arc4random_uniform(100) > 20 else {
+        // Sometimes you gotta stick it to the man, if you _really_ wanna win.
         return "\(input-1)"
     }
     return "\(input)"
 }
 
 let proExampleEntry = CodeChallengeEntry<ExampleCodeChallenge>(name: "Acid Burn") { input -> String in
+    // Just do it.
     return "\(input)"
 }
