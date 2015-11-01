@@ -106,18 +106,24 @@ extension CodeChallengeType {
      
      This function calls `generateDataset()` and then runs each input in the dataset through each entry in the `entries` multiple times, concurrently. It then processes all of the `CodeChallengeResult`s into `AcummulatedChallengeResult`s for each participant and returns them sorted by `totalTime`.
      
-     - Returns: An array of `AcummulatedChallengeResult`s for each participant sorted by `totalTime`.
+     - Returns: An array of `AcummulatedChallengeResult`s for each participant sorted by `averageTime`.
     */
     func runAll() -> [AccumulatedResultType] {
+        
+        // Generate the dataset, everybody gets the same one
         let dataset = generateDataset()
         
+        // Make a worker queue so that we can run through everything concurrently and save the runner some time.
         let workerQueue = NSOperationQueue()
-        workerQueue.maxConcurrentOperationCount = min(entries.count, 30)
+        workerQueue.maxConcurrentOperationCount = min(entries.count * dataset.count, 30)
         var workers = [OperationType]()
         
+        // For each entry
         for entry in entries {
             var iterations = [OperationType]()
+            // Run every input through the entry's block (which happens in the RunOperation's `main()`
             for input in dataset {
+                // Run each input through 10 times
                 for _ in 1...10 {
                     iterations.append(OperationType(entry: entry, input: input))
                 }
@@ -128,6 +134,7 @@ extension CodeChallengeType {
         print("Adding \(workers.count) operations to the queue and running them \(workerQueue.maxConcurrentOperationCount) at a time")
         workerQueue.addOperations(workers, waitUntilFinished: true)
         
+        // Gather up all of the results grouped by Participant name.
         var resultsByName = [String: [ResultType]]()
         for worker in workers {
             if resultsByName[worker.entry.name] == nil {
@@ -136,6 +143,7 @@ extension CodeChallengeType {
             resultsByName[worker.entry.name]?.append(worker.result)
         }
         
+        // Generate AccumulatedResults for each participant
         var accumulatedResults = [AccumulatedResultType]()
         for (name, results) in resultsByName {
             var successes = 0
@@ -150,6 +158,8 @@ extension CodeChallengeType {
             let result = AccumulatedResultType(name: name, results: results, successes: successes, failures: failures)
             accumulatedResults.append(result)
         }
+        
+        // Return the accumulated results sorted by average time.
         return accumulatedResults.sort { $0.averageTime < $1.averageTime }
     }
 }
