@@ -1,5 +1,5 @@
 //
-//  ExampleChallengeTests.swift
+//  TwoSumTests.swift
 //  CodeChallenge
 //
 //  Created by Ryan Arana on 10/31/15.
@@ -10,8 +10,8 @@ import XCTest
 
 @testable import CodeChallenge
 
-class ExampleChallengeTests: CodeChallengeTestCase {
-    func testExampleEntries() {
-        runTestsForChallenge(ExampleCodeChallenge())
+class TwoSumTests: CodeChallengeTestCase {
+    func testTwoSumEntries() {
+        runTestsForChallenge(TwoSumChallenge())
     }
 }

@@ -14,7 +14,7 @@ struct ExampleCodeChallenge: CodeChallengeType {
     typealias InputType = Int
     typealias OutputType = String
     
-    var title = "Example Challenge"
+    let title = "Example Challenge"
     
     var entries: [CodeChallengeEntry<ExampleCodeChallenge>] = [
         // Participants must add their entry instance to this array

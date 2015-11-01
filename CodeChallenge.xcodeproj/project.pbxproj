@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		9272E1AF1BD7F6560030B403 /* CodeChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9272E1A41BD7F6560030B403 /* CodeChallenge.framework */; };
-		9272E1D31BD7F8310030B403 /* TwoSomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9272E1D21BD7F8310030B403 /* TwoSomeTests.swift */; };
 		9272E1E41BDED71C0030B403 /* LongestSubstringWithoutRepeatingCharactersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9272E1E31BDED71C0030B403 /* LongestSubstringWithoutRepeatingCharactersTests.swift */; };
 		9272E1E61BDED73A0030B403 /* LetterCombinationsOfPhoneNumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9272E1E51BDED73A0030B403 /* LetterCombinationsOfPhoneNumberTests.swift */; };
-		9272E1EF1BDFDAC90030B403 /* AlexPersianTwoSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9272E1E71BDFDAC90030B403 /* AlexPersianTwoSum.swift */; };
-		9272E1F01BDFDAC90030B403 /* AranasaurusTwoSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9272E1E81BDFDAC90030B403 /* AranasaurusTwoSum.swift */; };
-		9272E1F11BDFDAC90030B403 /* AryaxtTwoSome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9272E1E91BDFDAC90030B403 /* AryaxtTwoSome.swift */; };
-		9272E1F21BDFDAC90030B403 /* BugKrushaTwoSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9272E1EA1BDFDAC90030B403 /* BugKrushaTwoSum.swift */; };
-		9272E1F31BDFDAC90030B403 /* IanKeenTwoSome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9272E1EB1BDFDAC90030B403 /* IanKeenTwoSome.swift */; };
-		9272E1F41BDFDAC90030B403 /* LoganTwoSome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9272E1EC1BDFDAC90030B403 /* LoganTwoSome.swift */; };
-		9272E1F51BDFDAC90030B403 /* MosabTwoSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9272E1ED1BDFDAC90030B403 /* MosabTwoSum.swift */; };
-		9272E1F61BDFDAC90030B403 /* NuudlesTwoSome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9272E1EE1BDFDAC90030B403 /* NuudlesTwoSome.swift */; };
 		94350F5B1BE5D698003592FB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94350F5A1BE5D698003592FB /* Info.plist */; };
 		94350F5F1BE5D721003592FB /* CodeChallengeTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94350F5E1BE5D721003592FB /* CodeChallengeTestCase.swift */; };
 		94350F611BE5D859003592FB /* ExampleChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94350F601BE5D859003592FB /* ExampleChallengeTests.swift */; };
+		94350F651BE5E836003592FB /* TwoSumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94350F641BE5E836003592FB /* TwoSumTests.swift */; };
+		94350F691BE5EB90003592FB /* Aranasaurus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94350F681BE5EB90003592FB /* Aranasaurus.swift */; };
+		94350F6B1BE5EBD3003592FB /* AlexPersian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94350F6A1BE5EBD3003592FB /* AlexPersian.swift */; };
+		94350F701BE5EE94003592FB /* Aryaxt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94350F6F1BE5EE94003592FB /* Aryaxt.swift */; };
+		94350F721BE5EF9F003592FB /* BugKrusha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94350F711BE5EF9F003592FB /* BugKrusha.swift */; };
+		94350F741BE5F04A003592FB /* IanKeen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94350F731BE5F04A003592FB /* IanKeen.swift */; };
+		94350F761BE5F0F6003592FB /* Logan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94350F751BE5F0F6003592FB /* Logan.swift */; };
+		94350F781BE5F174003592FB /* Mosab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94350F771BE5F174003592FB /* Mosab.swift */; };
+		94350F7A1BE5F24A003592FB /* Nuudles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94350F791BE5F24A003592FB /* Nuudles.swift */; };
 		9489866A1BE5CFB000D34976 /* CodeChallengeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948986691BE5CFB000D34976 /* CodeChallengeType.swift */; };
 		9489866E1BE5D1F000D34976 /* CodeChallengeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9489866D1BE5D1F000D34976 /* CodeChallengeResult.swift */; };
 		948986701BE5D28500D34976 /* ExampleCodeChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9489866F1BE5D28500D34976 /* ExampleCodeChallenge.swift */; };
@@ -42,20 +42,20 @@
 		9272E1A41BD7F6560030B403 /* CodeChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CodeChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9272E1AE1BD7F6560030B403 /* CodeChallenge.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeChallenge.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9272E1B51BD7F6560030B403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9272E1D21BD7F8310030B403 /* TwoSomeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoSomeTests.swift; sourceTree = "<group>"; };
 		9272E1E31BDED71C0030B403 /* LongestSubstringWithoutRepeatingCharactersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongestSubstringWithoutRepeatingCharactersTests.swift; sourceTree = "<group>"; };
 		9272E1E51BDED73A0030B403 /* LetterCombinationsOfPhoneNumberTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterCombinationsOfPhoneNumberTests.swift; sourceTree = "<group>"; };
-		9272E1E71BDFDAC90030B403 /* AlexPersianTwoSum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlexPersianTwoSum.swift; sourceTree = "<group>"; };
-		9272E1E81BDFDAC90030B403 /* AranasaurusTwoSum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AranasaurusTwoSum.swift; sourceTree = "<group>"; };
-		9272E1E91BDFDAC90030B403 /* AryaxtTwoSome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AryaxtTwoSome.swift; sourceTree = "<group>"; };
-		9272E1EA1BDFDAC90030B403 /* BugKrushaTwoSum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BugKrushaTwoSum.swift; sourceTree = "<group>"; };
-		9272E1EB1BDFDAC90030B403 /* IanKeenTwoSome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IanKeenTwoSome.swift; sourceTree = "<group>"; };
-		9272E1EC1BDFDAC90030B403 /* LoganTwoSome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoganTwoSome.swift; sourceTree = "<group>"; };
-		9272E1ED1BDFDAC90030B403 /* MosabTwoSum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MosabTwoSum.swift; sourceTree = "<group>"; };
-		9272E1EE1BDFDAC90030B403 /* NuudlesTwoSome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NuudlesTwoSome.swift; sourceTree = "<group>"; };
 		94350F5A1BE5D698003592FB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94350F5E1BE5D721003592FB /* CodeChallengeTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeChallengeTestCase.swift; sourceTree = "<group>"; };
 		94350F601BE5D859003592FB /* ExampleChallengeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleChallengeTests.swift; sourceTree = "<group>"; };
+		94350F641BE5E836003592FB /* TwoSumTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoSumTests.swift; sourceTree = "<group>"; };
+		94350F681BE5EB90003592FB /* Aranasaurus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Aranasaurus.swift; sourceTree = "<group>"; };
+		94350F6A1BE5EBD3003592FB /* AlexPersian.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlexPersian.swift; sourceTree = "<group>"; };
+		94350F6F1BE5EE94003592FB /* Aryaxt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Aryaxt.swift; sourceTree = "<group>"; };
+		94350F711BE5EF9F003592FB /* BugKrusha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BugKrusha.swift; sourceTree = "<group>"; };
+		94350F731BE5F04A003592FB /* IanKeen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IanKeen.swift; sourceTree = "<group>"; };
+		94350F751BE5F0F6003592FB /* Logan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logan.swift; sourceTree = "<group>"; };
+		94350F771BE5F174003592FB /* Mosab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mosab.swift; sourceTree = "<group>"; };
+		94350F791BE5F24A003592FB /* Nuudles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nuudles.swift; sourceTree = "<group>"; };
 		948986691BE5CFB000D34976 /* CodeChallengeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeChallengeType.swift; sourceTree = "<group>"; };
 		9489866D1BE5D1F000D34976 /* CodeChallengeResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeChallengeResult.swift; sourceTree = "<group>"; };
 		9489866F1BE5D28500D34976 /* ExampleCodeChallenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleCodeChallenge.swift; sourceTree = "<group>"; };
@@ -113,28 +113,12 @@
 			isa = PBXGroup;
 			children = (
 				94350F621BE5D89F003592FB /* Base */,
+				94350F631BE5E7DD003592FB /* Challenges */,
 				9272E1E11BDED7080030B403 /* LetterCombinationsOfPhoneNumber */,
 				9272E1E21BDED7080030B403 /* LongestSubstringWithoutRepeatingCharacters */,
-				9272E1D11BD7F8310030B403 /* TwoSome */,
 				9272E1B51BD7F6560030B403 /* Info.plist */,
 			);
 			path = CodeChallengeTests;
-			sourceTree = "<group>";
-		};
-		9272E1D11BD7F8310030B403 /* TwoSome */ = {
-			isa = PBXGroup;
-			children = (
-				9272E1D21BD7F8310030B403 /* TwoSomeTests.swift */,
-				9272E1E71BDFDAC90030B403 /* AlexPersianTwoSum.swift */,
-				9272E1E81BDFDAC90030B403 /* AranasaurusTwoSum.swift */,
-				9272E1E91BDFDAC90030B403 /* AryaxtTwoSome.swift */,
-				9272E1EA1BDFDAC90030B403 /* BugKrushaTwoSum.swift */,
-				9272E1EB1BDFDAC90030B403 /* IanKeenTwoSome.swift */,
-				9272E1EC1BDFDAC90030B403 /* LoganTwoSome.swift */,
-				9272E1ED1BDFDAC90030B403 /* MosabTwoSum.swift */,
-				9272E1EE1BDFDAC90030B403 /* NuudlesTwoSome.swift */,
-			);
-			path = TwoSome;
 			sourceTree = "<group>";
 		};
 		9272E1E11BDED7080030B403 /* LetterCombinationsOfPhoneNumber */ = {
@@ -156,7 +140,7 @@
 		94350F591BE5D5C1003592FB /* Challenges */ = {
 			isa = PBXGroup;
 			children = (
-				94FB98C91BE1B5D800228845 /* TwoSumChallenge.swift */,
+				94350F661BE5EB21003592FB /* TwoSum */,
 			);
 			path = Challenges;
 			sourceTree = "<group>";
@@ -168,6 +152,38 @@
 				94350F601BE5D859003592FB /* ExampleChallengeTests.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		94350F631BE5E7DD003592FB /* Challenges */ = {
+			isa = PBXGroup;
+			children = (
+				94350F641BE5E836003592FB /* TwoSumTests.swift */,
+			);
+			path = Challenges;
+			sourceTree = "<group>";
+		};
+		94350F661BE5EB21003592FB /* TwoSum */ = {
+			isa = PBXGroup;
+			children = (
+				94350F671BE5EB38003592FB /* Entries */,
+				94FB98C91BE1B5D800228845 /* TwoSumChallenge.swift */,
+			);
+			path = TwoSum;
+			sourceTree = "<group>";
+		};
+		94350F671BE5EB38003592FB /* Entries */ = {
+			isa = PBXGroup;
+			children = (
+				94350F681BE5EB90003592FB /* Aranasaurus.swift */,
+				94350F6A1BE5EBD3003592FB /* AlexPersian.swift */,
+				94350F6F1BE5EE94003592FB /* Aryaxt.swift */,
+				94350F711BE5EF9F003592FB /* BugKrusha.swift */,
+				94350F731BE5F04A003592FB /* IanKeen.swift */,
+				94350F751BE5F0F6003592FB /* Logan.swift */,
+				94350F771BE5F174003592FB /* Mosab.swift */,
+				94350F791BE5F24A003592FB /* Nuudles.swift */,
+			);
+			path = Entries;
 			sourceTree = "<group>";
 		};
 		948986681BE5CEB400D34976 /* Base */ = {
@@ -289,10 +305,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94350F7A1BE5F24A003592FB /* Nuudles.swift in Sources */,
+				94350F6B1BE5EBD3003592FB /* AlexPersian.swift in Sources */,
+				94350F781BE5F174003592FB /* Mosab.swift in Sources */,
 				94FB98CA1BE1B5D800228845 /* TwoSumChallenge.swift in Sources */,
 				9489866A1BE5CFB000D34976 /* CodeChallengeType.swift in Sources */,
+				94350F701BE5EE94003592FB /* Aryaxt.swift in Sources */,
 				948986701BE5D28500D34976 /* ExampleCodeChallenge.swift in Sources */,
 				9489866E1BE5D1F000D34976 /* CodeChallengeResult.swift in Sources */,
+				94350F741BE5F04A003592FB /* IanKeen.swift in Sources */,
+				94350F761BE5F0F6003592FB /* Logan.swift in Sources */,
+				94350F721BE5EF9F003592FB /* BugKrusha.swift in Sources */,
+				94350F691BE5EB90003592FB /* Aranasaurus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,18 +324,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9272E1F31BDFDAC90030B403 /* IanKeenTwoSome.swift in Sources */,
 				9272E1E61BDED73A0030B403 /* LetterCombinationsOfPhoneNumberTests.swift in Sources */,
-				9272E1F11BDFDAC90030B403 /* AryaxtTwoSome.swift in Sources */,
 				94350F611BE5D859003592FB /* ExampleChallengeTests.swift in Sources */,
-				9272E1F51BDFDAC90030B403 /* MosabTwoSum.swift in Sources */,
-				9272E1EF1BDFDAC90030B403 /* AlexPersianTwoSum.swift in Sources */,
-				9272E1F61BDFDAC90030B403 /* NuudlesTwoSome.swift in Sources */,
-				9272E1D31BD7F8310030B403 /* TwoSomeTests.swift in Sources */,
-				9272E1F21BDFDAC90030B403 /* BugKrushaTwoSum.swift in Sources */,
-				9272E1F41BDFDAC90030B403 /* LoganTwoSome.swift in Sources */,
+				94350F651BE5E836003592FB /* TwoSumTests.swift in Sources */,
 				94350F5F1BE5D721003592FB /* CodeChallengeTestCase.swift in Sources */,
-				9272E1F01BDFDAC90030B403 /* AranasaurusTwoSum.swift in Sources */,
 				9272E1E41BDED71C0030B403 /* LongestSubstringWithoutRepeatingCharactersTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,25 +1,25 @@
 //
-//  TwoSum.swift
-//  
+//  Mosab.swift
+//  CodeChallenge
 //
-//  Created by Mosab Elagha on 10/21/15.
-//
+//  Created by Ryan Arana on 11/1/15.
+//  Copyright © 2015 iosdevelopers. All rights reserved.
 //
 
 import Foundation
 
-func mosabTwoSum(var numbers : [Int], target : Int) -> (Int, Int)?
-{
+let mosabTwoSumEntry = CodeChallengeEntry<TwoSumChallenge>(name: "Mosab") { input in
+    var numbers = input.numbers
     var dictionary : [Int : Int] = [:] //Dictionary to hold numbers and indices
     
     for (index, number) in numbers.enumerate() {
         dictionary[number] = index
     }
     
-    return findIndices(&dictionary, numbers: &numbers, target: target)
+    return findIndices(&dictionary, numbers: &numbers, target: input.target)
 }
 
-func findIndices(inout map : [Int:Int], inout numbers : [Int], let target : Int) -> (Int, Int)?
+private func findIndices(inout map : [Int:Int], inout numbers : [Int], let target : Int) -> (Int, Int)?
 {
     for (index, number) in numbers.enumerate()
     {
