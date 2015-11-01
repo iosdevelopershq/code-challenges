@@ -35,9 +35,6 @@ class CodeChallengeTestCase: XCTestCase {
         formatter.minimumFractionDigits = 5
         formatter.maximumFractionDigits = 5
         for (i, accResult) in results.enumerate() {
-            let total = accResult.successes + accResult.failures
-            let successRate = Double(accResult.successes) / Double(total)
-            
             var name = accResult.name
             if name.characters.count < maxNameLength {
                 let diff = maxNameLength - name.characters.count
@@ -47,7 +44,7 @@ class CodeChallengeTestCase: XCTestCase {
                     name.append(Character("\t"))
                 }
             }
-            print("\(i+1). \(name)\t avg: \(formatter.stringFromNumber(accResult.averageTime)!)s\ttotal: \(formatter.stringFromNumber(accResult.totalTime)!)s\t[\(successRate * 100)% success rate]")
+            print("\(i+1). \(name)\t avg: \(formatter.stringFromNumber(accResult.averageTime)!)s\ttotal: \(formatter.stringFromNumber(accResult.totalTime)!)s\t[\(accResult.successRate * 100)% success rate]")
         }
         print("=== Individual Run Times ===")
         for (_, result) in results.enumerate() {

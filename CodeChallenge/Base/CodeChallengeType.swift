@@ -67,11 +67,17 @@ struct AccumulatedChallengeResult<ChallengeType: CodeChallengeType> {
     /// The name of the Entry's participant.
     let name: String
     
+    /// How many total runs does this AccumulatedResult represent.
+    let total: Int
+    
     /// How many of the runs passed verification.
     let successes: Int
     
     /// How many of the runs did not pass verification.
     let failures: Int
+    
+    /// The ratio of successes to failures (0.0 - 1.0)
+    let successRate: Double
     
     /// The array of individual runs' `CodeChallengeResult`s.
     let results: [CodeChallengeResult<ChallengeType>]
@@ -90,8 +96,10 @@ struct AccumulatedChallengeResult<ChallengeType: CodeChallengeType> {
         self.results = results
         self.successes = successes
         self.failures = failures
+        self.total = successes + failures
         self.totalTime = results.reduce(0) { $0 + $1.time }
         self.averageTime = totalTime / Double(results.count)
+        self.successRate = Double(successes) / Double(total)
     }
 }
 
