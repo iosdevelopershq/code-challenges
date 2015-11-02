@@ -8,16 +8,6 @@
 
 import Foundation
 
-struct Datum {
-    let index: Int
-    let number: Int
-    
-    init(_ index: Int, _ number: Int) {
-        self.index = index
-        self.number = number
-    }
-}
-
 let aranasaurusTwoSumEntry = CodeChallengeEntry<TwoSumChallenge>(name: "Aranasaurus") { input in
     
     var max = Datum(0, 0)
@@ -35,4 +25,14 @@ let aranasaurusTwoSumEntry = CodeChallengeEntry<TwoSumChallenge>(name: "Aranasau
     }
     
     return .None
+}
+
+private struct Datum {
+    let index: Int
+    let number: Int
+    
+    init(_ index: Int, _ number: Int) {
+        self.index = index
+        self.number = number
+    }
 }
