@@ -51,15 +51,6 @@ class CodeChallengeTestCase: XCTestCase {
             }
             print("\(i+1). \(name)\t avg: \(formatter.stringFromNumber(accResult.averageTime)!)s\ttotal: \(formatter.stringFromNumber(accResult.totalTime)!)s\t[\(accResult.successRate * 100)% success rate]")
         }
-        print("=== Individual Run Times ===")
-        for (_, result) in results.enumerate() {
-            let times = result.results.map { "\(formatter.stringFromNumber($0.time)!)s" }
-            print("\(result.name):", separator: "", terminator: " ")
-            for (i, t) in times.enumerate() {
-                let sep = i == times.endIndex.predecessor() ? "\n" : ", "
-                print("\(t)\(sep)", separator: "", terminator: "")
-            }
-        }
     }
 }
 
