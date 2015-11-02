@@ -37,11 +37,6 @@
                BlueprintName = "CodeChallengeTests"
                ReferencedContainer = "container:CodeChallenge.xcodeproj">
             </BuildableReference>
-            <SkippedTests>
-               <Test
-                  Identifier = "ExampleChallengeTests">
-               </Test>
-            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>
