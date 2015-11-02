@@ -22,6 +22,8 @@
 		94350F761BE5F0F6003592FB /* Logan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94350F751BE5F0F6003592FB /* Logan.swift */; };
 		94350F781BE5F174003592FB /* Mosab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94350F771BE5F174003592FB /* Mosab.swift */; };
 		94350F7A1BE5F24A003592FB /* Nuudles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94350F791BE5F24A003592FB /* Nuudles.swift */; };
+		944CFCD81BE72B3C00FD2E41 /* LetterCombinationsOfPhoneNumberChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944CFCD71BE72B3C00FD2E41 /* LetterCombinationsOfPhoneNumberChallenge.swift */; };
+		944CFCDB1BE7310B00FD2E41 /* LongestSubstringWithoutRepeatingCharactersChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944CFCDA1BE7310B00FD2E41 /* LongestSubstringWithoutRepeatingCharactersChallenge.swift */; };
 		9489866A1BE5CFB000D34976 /* CodeChallengeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948986691BE5CFB000D34976 /* CodeChallengeType.swift */; };
 		948986701BE5D28500D34976 /* ExampleCodeChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9489866F1BE5D28500D34976 /* ExampleCodeChallenge.swift */; };
 		94FB98CA1BE1B5D800228845 /* TwoSumChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FB98C91BE1B5D800228845 /* TwoSumChallenge.swift */; };
@@ -55,6 +57,8 @@
 		94350F751BE5F0F6003592FB /* Logan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logan.swift; sourceTree = "<group>"; };
 		94350F771BE5F174003592FB /* Mosab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mosab.swift; sourceTree = "<group>"; };
 		94350F791BE5F24A003592FB /* Nuudles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nuudles.swift; sourceTree = "<group>"; };
+		944CFCD71BE72B3C00FD2E41 /* LetterCombinationsOfPhoneNumberChallenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterCombinationsOfPhoneNumberChallenge.swift; sourceTree = "<group>"; };
+		944CFCDA1BE7310B00FD2E41 /* LongestSubstringWithoutRepeatingCharactersChallenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongestSubstringWithoutRepeatingCharactersChallenge.swift; sourceTree = "<group>"; };
 		948986691BE5CFB000D34976 /* CodeChallengeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeChallengeType.swift; sourceTree = "<group>"; };
 		9489866F1BE5D28500D34976 /* ExampleCodeChallenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleCodeChallenge.swift; sourceTree = "<group>"; };
 		94FB98C91BE1B5D800228845 /* TwoSumChallenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoSumChallenge.swift; sourceTree = "<group>"; };
@@ -112,33 +116,17 @@
 			children = (
 				94350F621BE5D89F003592FB /* Base */,
 				94350F631BE5E7DD003592FB /* Challenges */,
-				9272E1E11BDED7080030B403 /* LetterCombinationsOfPhoneNumber */,
-				9272E1E21BDED7080030B403 /* LongestSubstringWithoutRepeatingCharacters */,
 				9272E1B51BD7F6560030B403 /* Info.plist */,
 			);
 			path = CodeChallengeTests;
-			sourceTree = "<group>";
-		};
-		9272E1E11BDED7080030B403 /* LetterCombinationsOfPhoneNumber */ = {
-			isa = PBXGroup;
-			children = (
-				9272E1E51BDED73A0030B403 /* LetterCombinationsOfPhoneNumberTests.swift */,
-			);
-			path = LetterCombinationsOfPhoneNumber;
-			sourceTree = "<group>";
-		};
-		9272E1E21BDED7080030B403 /* LongestSubstringWithoutRepeatingCharacters */ = {
-			isa = PBXGroup;
-			children = (
-				9272E1E31BDED71C0030B403 /* LongestSubstringWithoutRepeatingCharactersTests.swift */,
-			);
-			path = LongestSubstringWithoutRepeatingCharacters;
 			sourceTree = "<group>";
 		};
 		94350F591BE5D5C1003592FB /* Challenges */ = {
 			isa = PBXGroup;
 			children = (
 				94350F661BE5EB21003592FB /* TwoSum */,
+				944CFCD61BE72AEB00FD2E41 /* LetterCombinationsOfPhoneNumber */,
+				944CFCD91BE730A700FD2E41 /* LongestSubstringWithoutRepeatingCharacters */,
 			);
 			path = Challenges;
 			sourceTree = "<group>";
@@ -156,6 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				94350F641BE5E836003592FB /* TwoSumTests.swift */,
+				9272E1E51BDED73A0030B403 /* LetterCombinationsOfPhoneNumberTests.swift */,
+				9272E1E31BDED71C0030B403 /* LongestSubstringWithoutRepeatingCharactersTests.swift */,
 			);
 			path = Challenges;
 			sourceTree = "<group>";
@@ -182,6 +172,22 @@
 				94350F791BE5F24A003592FB /* Nuudles.swift */,
 			);
 			path = Entries;
+			sourceTree = "<group>";
+		};
+		944CFCD61BE72AEB00FD2E41 /* LetterCombinationsOfPhoneNumber */ = {
+			isa = PBXGroup;
+			children = (
+				944CFCD71BE72B3C00FD2E41 /* LetterCombinationsOfPhoneNumberChallenge.swift */,
+			);
+			path = LetterCombinationsOfPhoneNumber;
+			sourceTree = "<group>";
+		};
+		944CFCD91BE730A700FD2E41 /* LongestSubstringWithoutRepeatingCharacters */ = {
+			isa = PBXGroup;
+			children = (
+				944CFCDA1BE7310B00FD2E41 /* LongestSubstringWithoutRepeatingCharactersChallenge.swift */,
+			);
+			path = LongestSubstringWithoutRepeatingCharacters;
 			sourceTree = "<group>";
 		};
 		948986681BE5CEB400D34976 /* Base */ = {
@@ -309,9 +315,11 @@
 				9489866A1BE5CFB000D34976 /* CodeChallengeType.swift in Sources */,
 				94350F701BE5EE94003592FB /* Aryaxt.swift in Sources */,
 				948986701BE5D28500D34976 /* ExampleCodeChallenge.swift in Sources */,
+				944CFCDB1BE7310B00FD2E41 /* LongestSubstringWithoutRepeatingCharactersChallenge.swift in Sources */,
 				94350F741BE5F04A003592FB /* IanKeen.swift in Sources */,
 				94350F761BE5F0F6003592FB /* Logan.swift in Sources */,
 				94350F721BE5EF9F003592FB /* BugKrusha.swift in Sources */,
+				944CFCD81BE72B3C00FD2E41 /* LetterCombinationsOfPhoneNumberChallenge.swift in Sources */,
 				94350F691BE5EB90003592FB /* Aranasaurus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
