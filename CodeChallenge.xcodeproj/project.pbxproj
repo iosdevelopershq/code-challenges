@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B1F0A4E1BE7EA060030135C /* BugKrushaLetterCombinationsOfPhoneNumberEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1F0A4D1BE7EA060030135C /* BugKrushaLetterCombinationsOfPhoneNumberEntry.swift */; };
+		809B704A1BF01B68004131BE /* LoganWrightEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B70491BF01B68004131BE /* LoganWrightEntry.swift */; };
 		9272E1AF1BD7F6560030B403 /* CodeChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9272E1A41BD7F6560030B403 /* CodeChallenge.framework */; };
 		9272E1E41BDED71C0030B403 /* LongestSubstringWithoutRepeatingCharactersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9272E1E31BDED71C0030B403 /* LongestSubstringWithoutRepeatingCharactersTests.swift */; };
 		9272E1E61BDED73A0030B403 /* LetterCombinationsOfPhoneNumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9272E1E51BDED73A0030B403 /* LetterCombinationsOfPhoneNumberTests.swift */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		1B1F0A4D1BE7EA060030135C /* BugKrushaLetterCombinationsOfPhoneNumberEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BugKrushaLetterCombinationsOfPhoneNumberEntry.swift; sourceTree = "<group>"; };
+		809B70491BF01B68004131BE /* LoganWrightEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoganWrightEntry.swift; sourceTree = "<group>"; };
 		9272E1A41BD7F6560030B403 /* CodeChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CodeChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9272E1AE1BD7F6560030B403 /* CodeChallenge.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeChallenge.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9272E1B51BD7F6560030B403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				1B1F0A4D1BE7EA060030135C /* BugKrushaLetterCombinationsOfPhoneNumberEntry.swift */,
+				809B70491BF01B68004131BE /* LoganWrightEntry.swift */,
 			);
 			path = Entries;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				94350F741BE5F04A003592FB /* IanKeen.swift in Sources */,
 				94350F761BE5F0F6003592FB /* Logan.swift in Sources */,
 				94350F721BE5EF9F003592FB /* BugKrusha.swift in Sources */,
+				809B704A1BF01B68004131BE /* LoganWrightEntry.swift in Sources */,
 				944CFCD81BE72B3C00FD2E41 /* LetterCombinationsOfPhoneNumberChallenge.swift in Sources */,
 				94350F691BE5EB90003592FB /* Aranasaurus.swift in Sources */,
 			);
