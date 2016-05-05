@@ -10,7 +10,7 @@ Here's step-by-step instructions on how to get an entry submitted:
 
 1. Fork the repo and clone it to your machine
 2. Open the Xcode project and navigate to the CodeChallenge -> Challenges folder of the Challenge you'd like to submit an entry for.
-3. Create a new file to put your solution in. Typically it should be named your `username.swift`.
+3. Create a new file to put your solution in. Typically it should be named `yourUsername-challengeNameEntry.swift`.
 4. In that file instantiate a `CodeChallengeEntry` object into a global named using the following format:
 
 ```
@@ -43,7 +43,7 @@ This Challenge implementation should be created in a subfolder of the Challenges
 
 Check out `CodeChallenge/Base/ExampleCodeChallenge.swift` for a very simple challenge, or the TwoSum challenge for a bit more involved example.
 
-Last step is you'll need to add a test file for this challenge. The test mostly writes itself. Just create a new test in `CodeChallengeTests/Challenges/FooTests.swift` which will approximately like this:
+Last step is you'll need to add a test file for this challenge. The test mostly writes itself. Just create a new test in `CodeChallengeTests/Challenges/FooTests.swift` which will look approximately like this:
 
 ```
 @testable import CodeChallenge
