@@ -10,7 +10,7 @@ import Foundation
 
 let bugkrushaTwoSumEntry = CodeChallengeEntry<TwoSumChallenge>(name: "Jazbo") { input in
     for (index, num) in input.numbers.enumerate() {
-        for var i = index + 1; i < input.numbers.count; i++ {
+        for i in index + 1 ..< input.numbers.count {
             if calculate(input.numbers[i], numTwo: num, calculation: +) == input.target {
                 return (index + 1, i + 1)
             }
