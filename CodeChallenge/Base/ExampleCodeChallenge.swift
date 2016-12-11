@@ -26,7 +26,7 @@ struct ExampleCodeChallenge: CodeChallengeType {
         return [Int](1...1000)
     }
     
-    func verifyOutput(output: String, forInput input: Int) -> Bool {
+    func verifyOutput(_ output: String, forInput input: Int) -> Bool {
         return output == "\(input)"
     }
 }

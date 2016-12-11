@@ -12,16 +12,16 @@ let mosabTwoSumEntry = CodeChallengeEntry<TwoSumChallenge>(name: "Mosab") { inpu
     var numbers = input.numbers
     var dictionary : [Int : Int] = [:] //Dictionary to hold numbers and indices
     
-    for (index, number) in numbers.enumerate() {
+    for (index, number) in numbers.enumerated() {
         dictionary[number] = index
     }
     
     return findIndices(&dictionary, numbers: &numbers, target: input.target)
 }
 
-private func findIndices(inout map : [Int:Int], inout numbers : [Int], let target : Int) -> (Int, Int)?
+private func findIndices(_ map : inout [Int:Int], numbers : inout [Int], target : Int) -> (Int, Int)?
 {
-    for (index, number) in numbers.enumerate()
+    for (index, number) in numbers.enumerated()
     {
         if let index2 = map[abs(number - target)]
         {

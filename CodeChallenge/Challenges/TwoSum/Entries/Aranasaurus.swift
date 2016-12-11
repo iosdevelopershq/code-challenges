@@ -13,18 +13,18 @@ let aranasaurusTwoSumEntry = CodeChallengeEntry<TwoSumChallenge>(name: "Aranasau
     var max = Datum(0, 0)
     let mid = input.target / 2
     
-    for (i, number) in input.numbers.enumerate() {
+    for (i, number) in input.numbers.enumerated() {
         guard number >= 0 && number <= input.target && number >= mid else { continue }
         
         if number > max.number {
-            if let diffIndex = input.numbers.indexOf(input.target - number) {
+            if let diffIndex = input.numbers.index(of: input.target - number) {
                 return (diffIndex + 1, i + 1)
             }
             max = Datum(i, number)
         }
     }
     
-    return .None
+    return .none
 }
 
 private struct Datum {

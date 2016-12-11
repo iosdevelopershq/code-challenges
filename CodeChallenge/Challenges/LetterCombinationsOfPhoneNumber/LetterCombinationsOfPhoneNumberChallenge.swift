@@ -35,12 +35,12 @@ struct LetterCombinationsOfPhoneNumberChallenge: CodeChallengeType {
         return ["23"]
     }
     
-    func verifyOutput(output: OutputType, forInput input: InputType) -> Bool {
+    func verifyOutput(_ output: OutputType, forInput input: InputType) -> Bool {
         guard let expected = verificationDictionary[input] else { return false }
-        return output.sort(<) == expected.sort(<)
+        return output.sorted(by: <) == expected.sorted(by: <)
     }
     
-    private let verificationDictionary = [
+    fileprivate let verificationDictionary = [
         "23": ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]
     ]
 }

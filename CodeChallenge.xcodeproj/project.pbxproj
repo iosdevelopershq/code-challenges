@@ -260,9 +260,11 @@
 				TargetAttributes = {
 					9272E1A31BD7F6560030B403 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0810;
 					};
 					9272E1AD1BD7F6560030B403 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -451,6 +453,7 @@
 				PRODUCT_NAME = CodeChallenge;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -468,6 +471,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.iosdevelopershq.CodeChallenge;
 				PRODUCT_NAME = CodeChallenge;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -479,6 +483,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.iosdevelopershq.CodeChallengeTests;
 				PRODUCT_MODULE_NAME = CodeChallengeTests;
 				PRODUCT_NAME = CodeChallenge;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -490,6 +495,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.iosdevelopershq.CodeChallengeTests;
 				PRODUCT_MODULE_NAME = CodeChallengeTests;
 				PRODUCT_NAME = CodeChallenge;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

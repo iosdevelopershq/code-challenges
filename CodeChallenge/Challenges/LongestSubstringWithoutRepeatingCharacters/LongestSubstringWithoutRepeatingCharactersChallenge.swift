@@ -32,12 +32,12 @@ struct LongestSubstringWithoutRepeatingCharactersChallenge: CodeChallengeType {
         ]
     }
     
-    func verifyOutput(output: OutputType, forInput input: InputType) -> Bool {
+    func verifyOutput(_ output: OutputType, forInput input: InputType) -> Bool {
         guard let expected = verificationDictionary[input] else { return false }
         return output == expected
     }
     
-    private let verificationDictionary = [
+    fileprivate let verificationDictionary = [
         "abcabcbb": 3,
         "bbbbb": 1
     ]
