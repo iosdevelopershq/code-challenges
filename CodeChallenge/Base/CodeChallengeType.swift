@@ -44,7 +44,7 @@ struct CodeChallengeEntry<ChallengeType: CodeChallengeType> {
     let name: String
     
     /// The block to be run to evaluate this entry.
-    let block: (_ input: ChallengeType.InputType) -> ChallengeType.OutputType
+    let block: (ChallengeType.InputType) -> ChallengeType.OutputType
 }
 
 /// A structure to hold the result of a single run of an Entry's `block`.
@@ -203,7 +203,7 @@ private class RunOperation<ChallengeType: CodeChallengeType>: Operation {
         var times = Array<TimeInterval>()
         for _ in 1...iterations {
             let start = Date()
-            outputs.append(entry.block(input: input))
+            outputs.append(entry.block(input))
             times.append(-start.timeIntervalSinceNow)
         }
         result = CodeChallengeResult(name: entry.name, input: input, outputs: outputs, times: times, iterations: iterations)
