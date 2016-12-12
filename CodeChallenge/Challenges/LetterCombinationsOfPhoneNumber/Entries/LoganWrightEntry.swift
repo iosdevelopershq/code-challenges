@@ -12,7 +12,7 @@ import Foundation
 
 typealias PhoneCombinationsTest = CodeChallengeEntry<LetterCombinationsOfPhoneNumberChallenge>
 let LoganWrightLetterCombinationOfPhoneNumberEntry =
-PhoneCombinationsTest(name: "LoganWright") { possibleCombinationsForPhoneNumber($0) }
+PhoneCombinationsTest(name: "LoganWright") { possibleCombinationsForPhoneNumber(phoneNumber: $0) }
 
 // MARK: Solution
 

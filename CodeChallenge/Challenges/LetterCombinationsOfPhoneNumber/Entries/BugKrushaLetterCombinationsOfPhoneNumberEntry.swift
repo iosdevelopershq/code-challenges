@@ -9,7 +9,7 @@
 import Foundation
 
 let bugKrushaLetterCombinationOfPhoneNumberEntry = CodeChallengeEntry<LetterCombinationsOfPhoneNumberChallenge>(name: "bugKrusha") { input in
-    return getCombinations(input)
+    return getCombinations(digitString: input)
 }
 
 
@@ -27,7 +27,7 @@ private enum Digit: String {
 }
 
 
-private func getCharactersForNumber(number number: String) -> Digit? {
+private func getCharactersForNumber(number: String) -> Digit? {
     switch number {
     case "2": return Digit.Two
     case "3": return Digit.Three
@@ -45,7 +45,7 @@ private func getCharactersForNumber(number number: String) -> Digit? {
 
 private func getCombinations(digitString: String) -> [String] {
     var arrayOfCharacterSets = [String]()
-    for (index, character) in digitString.characters.enumerate() {
+    for (index, character) in digitString.characters.enumerated() {
         if let charactersForNumber = getCharactersForNumber(number: "\(character)")?.rawValue {
             if index == 0 {
                 arrayOfCharacterSets = charactersForNumber.characters.map { "\($0)" }
