@@ -170,9 +170,9 @@ extension CodeChallengeType {
             for result in results {
                 for output in result.outputs {
                     if verifyOutput(output, forInput: result.input) {
-                        successes++
+                        successes += 1
                     } else {
-                        failures++
+                        failures += 1
                     }
                 }
             }

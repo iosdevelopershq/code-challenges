@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B1F0A4E1BE7EA060030135C /* BugKrushaLetterCombinationsOfPhoneNumberEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1F0A4D1BE7EA060030135C /* BugKrushaLetterCombinationsOfPhoneNumberEntry.swift */; };
+		809B704A1BF01B68004131BE /* LoganWrightEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B70491BF01B68004131BE /* LoganWrightEntry.swift */; };
 		9272E1AF1BD7F6560030B403 /* CodeChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9272E1A41BD7F6560030B403 /* CodeChallenge.framework */; };
 		9272E1E41BDED71C0030B403 /* LongestSubstringWithoutRepeatingCharactersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9272E1E31BDED71C0030B403 /* LongestSubstringWithoutRepeatingCharactersTests.swift */; };
 		9272E1E61BDED73A0030B403 /* LetterCombinationsOfPhoneNumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9272E1E51BDED73A0030B403 /* LetterCombinationsOfPhoneNumberTests.swift */; };
-		94350F5B1BE5D698003592FB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94350F5A1BE5D698003592FB /* Info.plist */; };
 		94350F5F1BE5D721003592FB /* CodeChallengeTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94350F5E1BE5D721003592FB /* CodeChallengeTestCase.swift */; };
 		94350F611BE5D859003592FB /* ExampleChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94350F601BE5D859003592FB /* ExampleChallengeTests.swift */; };
 		94350F651BE5E836003592FB /* TwoSumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94350F641BE5E836003592FB /* TwoSumTests.swift */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B1F0A4D1BE7EA060030135C /* BugKrushaLetterCombinationsOfPhoneNumberEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BugKrushaLetterCombinationsOfPhoneNumberEntry.swift; sourceTree = "<group>"; };
+		809B70491BF01B68004131BE /* LoganWrightEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoganWrightEntry.swift; sourceTree = "<group>"; };
 		9272E1A41BD7F6560030B403 /* CodeChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CodeChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9272E1AE1BD7F6560030B403 /* CodeChallenge.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeChallenge.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9272E1B51BD7F6560030B403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B1F0A4C1BE7E9820030135C /* Entries */ = {
+			isa = PBXGroup;
+			children = (
+				1B1F0A4D1BE7EA060030135C /* BugKrushaLetterCombinationsOfPhoneNumberEntry.swift */,
+				809B70491BF01B68004131BE /* LoganWrightEntry.swift */,
+			);
+			path = Entries;
+			sourceTree = "<group>";
+		};
 		9272E19A1BD7F6560030B403 = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +189,7 @@
 		944CFCD61BE72AEB00FD2E41 /* LetterCombinationsOfPhoneNumber */ = {
 			isa = PBXGroup;
 			children = (
+				1B1F0A4C1BE7E9820030135C /* Entries */,
 				944CFCD71BE72B3C00FD2E41 /* LetterCombinationsOfPhoneNumberChallenge.swift */,
 			);
 			path = LetterCombinationsOfPhoneNumber;
@@ -255,7 +268,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = iosdevelopers;
 				TargetAttributes = {
 					9272E1A31BD7F6560030B403 = {
@@ -292,7 +305,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94350F5B1BE5D698003592FB /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,9 +330,11 @@
 				94350F701BE5EE94003592FB /* Aryaxt.swift in Sources */,
 				948986701BE5D28500D34976 /* ExampleCodeChallenge.swift in Sources */,
 				944CFCDB1BE7310B00FD2E41 /* LongestSubstringWithoutRepeatingCharactersChallenge.swift in Sources */,
+				1B1F0A4E1BE7EA060030135C /* BugKrushaLetterCombinationsOfPhoneNumberEntry.swift in Sources */,
 				94350F741BE5F04A003592FB /* IanKeen.swift in Sources */,
 				94350F761BE5F0F6003592FB /* Logan.swift in Sources */,
 				94350F721BE5EF9F003592FB /* BugKrusha.swift in Sources */,
+				809B704A1BF01B68004131BE /* LoganWrightEntry.swift in Sources */,
 				944CFCD81BE72B3C00FD2E41 /* LetterCombinationsOfPhoneNumberChallenge.swift in Sources */,
 				94350F691BE5EB90003592FB /* Aranasaurus.swift in Sources */,
 			);
