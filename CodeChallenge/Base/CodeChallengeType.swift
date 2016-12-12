@@ -15,9 +15,9 @@ import Foundation
 */
 protocol CodeChallengeType {
     /// The type for the input(s) for the challenge.
-    typealias InputType
+    associatedtype InputType
     /// The type that the entry's function will return.
-    typealias OutputType
+    associatedtype OutputType
     
     /// The heading title for this challenge
     var title: String { get }
@@ -170,9 +170,9 @@ extension CodeChallengeType {
             for result in results {
                 for output in result.outputs {
                     if verifyOutput(output, forInput: result.input) {
-                        successes++
+                        successes += 1
                     } else {
-                        failures++
+                        failures += 1
                     }
                 }
             }
