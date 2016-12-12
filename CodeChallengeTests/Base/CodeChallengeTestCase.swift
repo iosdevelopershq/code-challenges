@@ -38,18 +38,22 @@ class CodeChallengeTestCase: XCTestCase {
         formatter.numberStyle = .decimal
         formatter.minimumFractionDigits = 5
         formatter.maximumFractionDigits = 5
+
         for (i, accResult) in results.enumerated() {
             var name = accResult.name
             // try to make the results line up a bit by inserting the correct amount of tabs between the name and the avg based on the maximum name length vs this name's length
             if name.characters.count < maxNameLength {
                 let diff = maxNameLength - name.characters.count
                 let tabWidth = 5
-                let tabsToInsert = Int(ceil(Double(diff)/Double(tabWidth)))
+                var tabsToInsert = Int(ceil(Double(diff)/Double(tabWidth)))
+                if diff % tabWidth == 0 {
+                    tabsToInsert += 1
+                }
                 for _ in 1...tabsToInsert {
                     name.append(Character("\t"))
                 }
             }
-            print("\(i+1). \(name)\t avg: \(formatter.string(from: accResult.averageTime)!)s\ttotal: \(formatter.string(from: accResult.totalTime)!)s\t[\(accResult.successRate * 100)% success rate]")
+            print("\(i+1). \(name)\t avg: \(formatter.string(from: NSDecimalNumber(decimal: Decimal(accResult.averageTime)))!)s\ttotal: \(formatter.string(from: NSDecimalNumber(decimal: Decimal(accResult.totalTime)))!)s\t[\(accResult.successRate * 100)% success rate]")
         }
     }
 }
