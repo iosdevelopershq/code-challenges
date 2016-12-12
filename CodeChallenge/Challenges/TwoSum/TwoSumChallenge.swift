@@ -39,7 +39,7 @@ struct TwoSumChallenge: CodeChallengeType {
         return [InputType(numbers: numbers, target: target)]
     }
     
-    func verifyOutput(output: OutputType, forInput input: InputType) -> Bool {
+    func verifyOutput(_ output: OutputType, forInput input: InputType) -> Bool {
         guard let output = output else { return false }
         return (numbers[output.first - 1] + numbers[output.second - 1] == target)
     }
@@ -56,7 +56,7 @@ private let numbers: [Int] = {
     
     let min = (target / 2)
     let max = (target - min)
-    numbers.insert(min, atIndex: Int(arc4random_uniform(UInt32(numbers.count))))
-    numbers.insert(max, atIndex: Int(arc4random_uniform(UInt32(numbers.count))))
+    numbers.insert(min, at: Int(arc4random_uniform(UInt32(numbers.count))))
+    numbers.insert(max, at: Int(arc4random_uniform(UInt32(numbers.count))))
     return numbers
 }()

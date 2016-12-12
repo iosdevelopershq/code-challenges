@@ -9,8 +9,8 @@
 import Foundation
 
 let ianKeenTwoSumEntry = CodeChallengeEntry<TwoSumChallenge>(name: "IanKeen") { input in
-    for (index, digit) in input.numbers.enumerate() {
-        if let other = input.numbers.indexOf(input.target - digit) {
+    for (index, digit) in input.numbers.enumerated() {
+        if let other = input.numbers.index(of: input.target - digit) {
             return (index + 1, Int(other) + 1)
         }
     }

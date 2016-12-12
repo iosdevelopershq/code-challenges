@@ -10,7 +10,7 @@ import Foundation
 
 let nuudlesTwoSumEntry = CodeChallengeEntry<TwoSumChallenge>(name: "Nuudles") { input in
 	var numberToIndex: [Int: Int] = [:]
-	for (index, number) in input.numbers.enumerate()
+	for (index, number) in input.numbers.enumerated()
 	{
 		if let pairIndex = numberToIndex[input.target - number]
 		{

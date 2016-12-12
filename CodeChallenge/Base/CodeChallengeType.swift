@@ -35,7 +35,7 @@ protocol CodeChallengeType {
      
      - Returns: True if the output is valid, false if not.
     */
-    func verifyOutput(output: OutputType, forInput input: InputType) -> Bool
+    func verifyOutput(_ output: OutputType, forInput input: InputType) -> Bool
 }
 
 /// An entry for a `CodeChallengeType`.
@@ -44,7 +44,7 @@ struct CodeChallengeEntry<ChallengeType: CodeChallengeType> {
     let name: String
     
     /// The block to be run to evaluate this entry.
-    let block: (input: ChallengeType.InputType) -> ChallengeType.OutputType
+    let block: (ChallengeType.InputType) -> ChallengeType.OutputType
 }
 
 /// A structure to hold the result of a single run of an Entry's `block`.
@@ -59,18 +59,18 @@ struct CodeChallengeResult<ChallengeType: CodeChallengeType> {
     let outputs: [ChallengeType.OutputType]
     
     /// The amount of wall-clock time it took to process the input. There should be one time measurment in this array for each iteration, and the index here will match the corresponding output in the `outputs` array.
-    let times: [NSTimeInterval]
+    let times: [TimeInterval]
     
     /// The number of times the entry was run.
     let iterations: Int
     
     /// The total wall-clock time it took to process input `iterations` times.
-    var totalTime: NSTimeInterval { return times.reduce(0) { $0 + $1 } }
+    var totalTime: TimeInterval { return times.reduce(0) { $0 + $1 } }
     
     /// The average wall-clock time a single iteration took to process the input.
-    var averageTime: NSTimeInterval {
+    var averageTime: TimeInterval {
         // computers don't like dividing by zero.
-        guard times.count != 0 else { return NSTimeInterval.infinity }
+        guard times.count != 0 else { return TimeInterval.infinity }
         return Double(totalTime) / Double(times.count)
     }
 }
@@ -96,10 +96,10 @@ struct AccumulatedChallengeResult<ChallengeType: CodeChallengeType> {
     let results: [CodeChallengeResult<ChallengeType>]
     
     /// The total wall-clock time it took to process all results.
-    let totalTime: NSTimeInterval
+    let totalTime: TimeInterval
     
     /// The average wall-clock time a single iteration took to process its input.
-    let averageTime: NSTimeInterval
+    let averageTime: TimeInterval
     
     /**
      Create a new AccumulatedChallengeResult from the given set of results. The time properties will be calculated using the given parameters to this init.
@@ -114,7 +114,7 @@ struct AccumulatedChallengeResult<ChallengeType: CodeChallengeType> {
         self.successRate = Double(successes) / Double(total)
         
         if total == 0 {
-            self.averageTime = NSTimeInterval.infinity
+            self.averageTime = TimeInterval.infinity
         } else {
             self.averageTime = Double(results.reduce(0) { $0 + $1.averageTime }) / Double(total)
         }
@@ -122,8 +122,8 @@ struct AccumulatedChallengeResult<ChallengeType: CodeChallengeType> {
 }
 
 extension CodeChallengeType {
-    private typealias ResultType = CodeChallengeResult<Self>
-    private typealias OperationType = RunOperation<Self>
+    fileprivate typealias ResultType = CodeChallengeResult<Self>
+    fileprivate typealias OperationType = RunOperation<Self>
     
     typealias AccumulatedResultType = AccumulatedChallengeResult<Self>
     
@@ -140,14 +140,14 @@ extension CodeChallengeType {
         let dataset = generateDataset()
         
         // Make a worker queue so that we can run through everything concurrently and save the runner some time.
-        let workerQueue = NSOperationQueue()
+        let workerQueue = OperationQueue()
         workerQueue.maxConcurrentOperationCount = 30
         var workers = [OperationType]()
         let iterations = 10
         
         // For each entry
         for entry in entries {
-            workers.appendContentsOf(dataset.map { OperationType(entry: entry, input: $0, iterations: iterations) })
+            workers.append(contentsOf: dataset.map { OperationType(entry: entry, input: $0, iterations: iterations) })
         }
         
         print("Adding \(workers.count) operations to the queue and running them \(min(workerQueue.maxConcurrentOperationCount, workers.count)) at a time")
@@ -181,11 +181,11 @@ extension CodeChallengeType {
         }
         
         // Return the accumulated results sorted by average time.
-        return accumulatedResults.sort { $0.averageTime < $1.averageTime }
+        return accumulatedResults.sorted { $0.averageTime < $1.averageTime }
     }
 }
 
-private class RunOperation<ChallengeType: CodeChallengeType>: NSOperation {
+private class RunOperation<ChallengeType: CodeChallengeType>: Operation {
     let entry: CodeChallengeEntry<ChallengeType>
     let input: ChallengeType.InputType
     let iterations: Int
@@ -200,10 +200,10 @@ private class RunOperation<ChallengeType: CodeChallengeType>: NSOperation {
     
     override func main() {
         var outputs = Array<ChallengeType.OutputType>()
-        var times = Array<NSTimeInterval>()
+        var times = Array<TimeInterval>()
         for _ in 1...iterations {
-            let start = NSDate()
-            outputs.append(entry.block(input: input))
+            let start = Date()
+            outputs.append(entry.block(input))
             times.append(-start.timeIntervalSinceNow)
         }
         result = CodeChallengeResult(name: entry.name, input: input, outputs: outputs, times: times, iterations: iterations)

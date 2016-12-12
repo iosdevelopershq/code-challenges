@@ -9,7 +9,7 @@
 import Foundation
 
 let bugkrushaTwoSumEntry = CodeChallengeEntry<TwoSumChallenge>(name: "Jazbo") { input in
-    for (index, num) in input.numbers.enumerate() {
+    for (index, num) in input.numbers.enumerated() {
         for i in index + 1 ..< input.numbers.count {
             if calculate(input.numbers[i], numTwo: num, calculation: +) == input.target {
                 return (index + 1, i + 1)
@@ -19,6 +19,6 @@ let bugkrushaTwoSumEntry = CodeChallengeEntry<TwoSumChallenge>(name: "Jazbo") { 
     return nil
 }
 
-private func calculate(numOne: Int, numTwo: Int, calculation: (a: Int, b: Int) -> Int) -> Int {
-    return calculation(a: numOne, b: numTwo)
+private func calculate(_ numOne: Int, numTwo: Int, calculation: (_ a: Int, _ b: Int) -> Int) -> Int {
+    return calculation(numOne, numTwo)
 }
