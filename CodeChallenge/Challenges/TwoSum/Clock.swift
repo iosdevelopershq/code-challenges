@@ -15,6 +15,14 @@ import Foundation
  
  The angles should be returned in a tuple as follows
  (hourHandAngle: Int, minuteHandAngle: Int, secondHandAndle: Int)
+ 
+ 
+ 
+ EXAMPLES
+ "06:00:00" getAngles returns [180, 0, 0]
+ "08:30:00" getAngles returns [255, 180, 0]
+ "10:17:55" getAngles returns [308, 107, 330]
+
  */
 
 struct ClockChallenge: CodeChallengeType {
@@ -28,6 +36,6 @@ struct ClockChallenge: CodeChallengeType {
     }
     
     func generateDataset() -> [String] {
-        <#code#>
+        return [""]
     }
 }
