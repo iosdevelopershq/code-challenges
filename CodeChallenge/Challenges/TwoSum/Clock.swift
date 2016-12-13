@@ -16,13 +16,10 @@ import Foundation
  The angles should be returned in a tuple as follows
  (hourHandAngle: Int, minuteHandAngle: Int, secondHandAndle: Int)
  
- 
- 
  EXAMPLES
  "06:00:00" should return (180, 0, 0)
  "08:30:00" should return  (255, 180, 0)
  "10:17:55" should return (308, 107, 330)
-
  */
 
 struct ClockChallenge: CodeChallengeType {
