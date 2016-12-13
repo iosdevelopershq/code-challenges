@@ -22,7 +22,6 @@ let bugKrushaClockEntry = CodeChallengeEntry<ClockChallenge>(name: "bugkrusha") 
         let hours = Double(timeBreakDown[0])
         else { fatalError() }
     
-    
     let secondsAngle = seconds * degreePerInterval
     let minutesAngle = minutes * degreePerInterval + (seconds/numberOfIntervals * degreePerInterval)
     let hoursAngle = hours * degreePerHour + (minutes/numberOfIntervals * degreePerHour)
