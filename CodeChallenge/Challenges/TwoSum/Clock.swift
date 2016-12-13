@@ -19,9 +19,9 @@ import Foundation
  
  
  EXAMPLES
- "06:00:00" getAngles returns [180, 0, 0]
- "08:30:00" getAngles returns [255, 180, 0]
- "10:17:55" getAngles returns [308, 107, 330]
+ "06:00:00" should return (180, 0, 0)
+ "08:30:00" should return  (255, 180, 0)
+ "10:17:55" should return (308, 107, 330)
 
  */
 
@@ -31,11 +31,23 @@ struct ClockChallenge: CodeChallengeType {
     
     var title = "Clock Challenge"
     
+    var entries: [CodeChallengeEntry<ClockChallenge>] = [
+    ]
+    
     func verifyOutput(_ output: (hourHandeAnlge: Int, minuteHandAngle: Int, secondHandAngle: Int), forInput input: String) -> Bool {
-        <#code#>
+        guard
+            let value = verificationData[input],
+            value == output else { return false }
+        return true
     }
     
     func generateDataset() -> [String] {
-        return [""]
+        return ["06:00:00","08:30:00", "10:17:55"]
     }
+    
+    private var verificationData = [
+        "06:00:00": (180, 0, 0),
+        "08:30:00": (255, 180, 0),
+        "10:17:55": (308, 107, 330)
+    ]
 }
