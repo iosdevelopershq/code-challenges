@@ -45,7 +45,7 @@
 
 /* Begin PBXFileReference section */
 		1B1F0A4D1BE7EA060030135C /* BugKrushaLetterCombinationsOfPhoneNumberEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BugKrushaLetterCombinationsOfPhoneNumberEntry.swift; sourceTree = "<group>"; };
-		1B9E113E1E005A7C00B9FA5A /* Clock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Clock.swift; path = TwoSum/Clock.swift; sourceTree = "<group>"; };
+		1B9E113E1E005A7C00B9FA5A /* Clock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
 		1B9E11401E006A2B00B9FA5A /* BugKrushaClockEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BugKrushaClockEntry.swift; sourceTree = "<group>"; };
 		1B9E11451E006F0800B9FA5A /* ClockTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockTests.swift; sourceTree = "<group>"; };
 		809B70491BF01B68004131BE /* LoganWrightEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoganWrightEntry.swift; sourceTree = "<group>"; };
@@ -106,16 +106,16 @@
 			children = (
 				1B9E11401E006A2B00B9FA5A /* BugKrushaClockEntry.swift */,
 			);
-			name = Entries;
+			path = Entries;
 			sourceTree = "<group>";
 		};
 		1B9E11471E010A3500B9FA5A /* Clock */ = {
 			isa = PBXGroup;
 			children = (
-				1B9E113E1E005A7C00B9FA5A /* Clock.swift */,
 				1B9E11421E006A2F00B9FA5A /* Entries */,
+				1B9E113E1E005A7C00B9FA5A /* Clock.swift */,
 			);
-			name = Clock;
+			path = Clock;
 			sourceTree = "<group>";
 		};
 		9272E19A1BD7F6560030B403 = {
