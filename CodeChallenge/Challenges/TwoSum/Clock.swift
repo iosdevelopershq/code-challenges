@@ -31,7 +31,7 @@ struct ClockChallenge: CodeChallengeType {
     var title = "Clock Challenge"
     
     var entries: [CodeChallengeEntry<ClockChallenge>] = [
-        
+        bugKrushaClockEntry
     ]
     
     func verifyOutput(_ output: (hourHandeAnlge: Int, minuteHandAngle: Int, secondHandAngle: Int), forInput input: String) -> Bool {
