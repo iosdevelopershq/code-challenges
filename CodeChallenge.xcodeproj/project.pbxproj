@@ -109,6 +109,15 @@
 			name = Entries;
 			sourceTree = "<group>";
 		};
+		1B9E11471E010A3500B9FA5A /* Clock */ = {
+			isa = PBXGroup;
+			children = (
+				1B9E113E1E005A7C00B9FA5A /* Clock.swift */,
+				1B9E11421E006A2F00B9FA5A /* Entries */,
+			);
+			name = Clock;
+			sourceTree = "<group>";
+		};
 		9272E19A1BD7F6560030B403 = {
 			isa = PBXGroup;
 			children = (
@@ -150,8 +159,7 @@
 		94350F591BE5D5C1003592FB /* Challenges */ = {
 			isa = PBXGroup;
 			children = (
-				1B9E113E1E005A7C00B9FA5A /* Clock.swift */,
-				1B9E11421E006A2F00B9FA5A /* Entries */,
+				1B9E11471E010A3500B9FA5A /* Clock */,
 				94350F661BE5EB21003592FB /* TwoSum */,
 				944CFCD61BE72AEB00FD2E41 /* LetterCombinationsOfPhoneNumber */,
 				944CFCD91BE730A700FD2E41 /* LongestSubstringWithoutRepeatingCharacters */,
