@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1B1F0A4E1BE7EA060030135C /* BugKrushaLetterCombinationsOfPhoneNumberEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1F0A4D1BE7EA060030135C /* BugKrushaLetterCombinationsOfPhoneNumberEntry.swift */; };
+		1B9E113F1E005A7C00B9FA5A /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E113E1E005A7C00B9FA5A /* Clock.swift */; };
+		1B9E11411E006A2B00B9FA5A /* BugKrushaClockEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E11401E006A2B00B9FA5A /* BugKrushaClockEntry.swift */; };
+		1B9E11461E006F0800B9FA5A /* ClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E11451E006F0800B9FA5A /* ClockTests.swift */; };
 		809B704A1BF01B68004131BE /* LoganWrightEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B70491BF01B68004131BE /* LoganWrightEntry.swift */; };
 		9272E1AF1BD7F6560030B403 /* CodeChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9272E1A41BD7F6560030B403 /* CodeChallenge.framework */; };
 		9272E1E41BDED71C0030B403 /* LongestSubstringWithoutRepeatingCharactersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9272E1E31BDED71C0030B403 /* LongestSubstringWithoutRepeatingCharactersTests.swift */; };
@@ -42,6 +45,9 @@
 
 /* Begin PBXFileReference section */
 		1B1F0A4D1BE7EA060030135C /* BugKrushaLetterCombinationsOfPhoneNumberEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BugKrushaLetterCombinationsOfPhoneNumberEntry.swift; sourceTree = "<group>"; };
+		1B9E113E1E005A7C00B9FA5A /* Clock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
+		1B9E11401E006A2B00B9FA5A /* BugKrushaClockEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BugKrushaClockEntry.swift; sourceTree = "<group>"; };
+		1B9E11451E006F0800B9FA5A /* ClockTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockTests.swift; sourceTree = "<group>"; };
 		809B70491BF01B68004131BE /* LoganWrightEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoganWrightEntry.swift; sourceTree = "<group>"; };
 		9272E1A41BD7F6560030B403 /* CodeChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CodeChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9272E1AE1BD7F6560030B403 /* CodeChallenge.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeChallenge.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +101,23 @@
 			path = Entries;
 			sourceTree = "<group>";
 		};
+		1B9E11421E006A2F00B9FA5A /* Entries */ = {
+			isa = PBXGroup;
+			children = (
+				1B9E11401E006A2B00B9FA5A /* BugKrushaClockEntry.swift */,
+			);
+			path = Entries;
+			sourceTree = "<group>";
+		};
+		1B9E11471E010A3500B9FA5A /* Clock */ = {
+			isa = PBXGroup;
+			children = (
+				1B9E11421E006A2F00B9FA5A /* Entries */,
+				1B9E113E1E005A7C00B9FA5A /* Clock.swift */,
+			);
+			path = Clock;
+			sourceTree = "<group>";
+		};
 		9272E19A1BD7F6560030B403 = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +159,7 @@
 		94350F591BE5D5C1003592FB /* Challenges */ = {
 			isa = PBXGroup;
 			children = (
+				1B9E11471E010A3500B9FA5A /* Clock */,
 				94350F661BE5EB21003592FB /* TwoSum */,
 				944CFCD61BE72AEB00FD2E41 /* LetterCombinationsOfPhoneNumber */,
 				944CFCD91BE730A700FD2E41 /* LongestSubstringWithoutRepeatingCharacters */,
@@ -157,6 +181,7 @@
 			children = (
 				94350F641BE5E836003592FB /* TwoSumTests.swift */,
 				9272E1E51BDED73A0030B403 /* LetterCombinationsOfPhoneNumberTests.swift */,
+				1B9E11451E006F0800B9FA5A /* ClockTests.swift */,
 				9272E1E31BDED71C0030B403 /* LongestSubstringWithoutRepeatingCharactersTests.swift */,
 			);
 			path = Challenges;
@@ -324,6 +349,8 @@
 			files = (
 				94350F7A1BE5F24A003592FB /* Nuudles.swift in Sources */,
 				94350F6B1BE5EBD3003592FB /* AlexPersian.swift in Sources */,
+				1B9E113F1E005A7C00B9FA5A /* Clock.swift in Sources */,
+				1B9E11411E006A2B00B9FA5A /* BugKrushaClockEntry.swift in Sources */,
 				94350F781BE5F174003592FB /* Mosab.swift in Sources */,
 				94FB98CA1BE1B5D800228845 /* TwoSumChallenge.swift in Sources */,
 				9489866A1BE5CFB000D34976 /* CodeChallengeType.swift in Sources */,
@@ -344,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B9E11461E006F0800B9FA5A /* ClockTests.swift in Sources */,
 				9272E1E61BDED73A0030B403 /* LetterCombinationsOfPhoneNumberTests.swift in Sources */,
 				94350F611BE5D859003592FB /* ExampleChallengeTests.swift in Sources */,
 				94350F651BE5E836003592FB /* TwoSumTests.swift in Sources */,
