@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B1F0A4E1BE7EA060030135C /* BugKrushaLetterCombinationsOfPhoneNumberEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1F0A4D1BE7EA060030135C /* BugKrushaLetterCombinationsOfPhoneNumberEntry.swift */; };
+		1B31586F1E02FC7E0052ACBD /* FlavioSilverioClockEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B31586E1E02FC7E0052ACBD /* FlavioSilverioClockEntry.swift */; };
 		1B9E113F1E005A7C00B9FA5A /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E113E1E005A7C00B9FA5A /* Clock.swift */; };
 		1B9E11411E006A2B00B9FA5A /* BugKrushaClockEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E11401E006A2B00B9FA5A /* BugKrushaClockEntry.swift */; };
 		1B9E11461E006F0800B9FA5A /* ClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E11451E006F0800B9FA5A /* ClockTests.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		1B1F0A4D1BE7EA060030135C /* BugKrushaLetterCombinationsOfPhoneNumberEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BugKrushaLetterCombinationsOfPhoneNumberEntry.swift; sourceTree = "<group>"; };
+		1B31586E1E02FC7E0052ACBD /* FlavioSilverioClockEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlavioSilverioClockEntry.swift; sourceTree = "<group>"; };
 		1B9E113E1E005A7C00B9FA5A /* Clock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
 		1B9E11401E006A2B00B9FA5A /* BugKrushaClockEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BugKrushaClockEntry.swift; sourceTree = "<group>"; };
 		1B9E11451E006F0800B9FA5A /* ClockTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockTests.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				1B9E11401E006A2B00B9FA5A /* BugKrushaClockEntry.swift */,
+				1B31586E1E02FC7E0052ACBD /* FlavioSilverioClockEntry.swift */,
 			);
 			path = Entries;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				9489866A1BE5CFB000D34976 /* CodeChallengeType.swift in Sources */,
 				94350F701BE5EE94003592FB /* Aryaxt.swift in Sources */,
 				948986701BE5D28500D34976 /* ExampleCodeChallenge.swift in Sources */,
+				1B31586F1E02FC7E0052ACBD /* FlavioSilverioClockEntry.swift in Sources */,
 				944CFCDB1BE7310B00FD2E41 /* LongestSubstringWithoutRepeatingCharactersChallenge.swift in Sources */,
 				1B1F0A4E1BE7EA060030135C /* BugKrushaLetterCombinationsOfPhoneNumberEntry.swift in Sources */,
 				94350F741BE5F04A003592FB /* IanKeen.swift in Sources */,
