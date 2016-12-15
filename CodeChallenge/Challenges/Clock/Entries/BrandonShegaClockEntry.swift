@@ -5,7 +5,7 @@ let brandonShegaClockEntry = CodeChallengeEntry<ClockChallenge>(name: "brandonsh
   df.dateFormat = "HH:MM:SS"
   guard let date = df.date(from: input) else { return (0, 0, 0) }
   let dateComps = Calendar.current.dateComponents([.hour, .minute, .second], from: date)
-  return (0, 0, 0)
+  return dateComps.handsInAngles
 }
 
 fileprivate extension DateComponents {
