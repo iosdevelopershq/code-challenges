@@ -13,6 +13,7 @@
 		1B9E11411E006A2B00B9FA5A /* BugKrushaClockEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E11401E006A2B00B9FA5A /* BugKrushaClockEntry.swift */; };
 		1B9E11461E006F0800B9FA5A /* ClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E11451E006F0800B9FA5A /* ClockTests.swift */; };
 		2EB83A801E03290400FAAB32 /* EthanSchatzline-ClockEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB83A7F1E03290400FAAB32 /* EthanSchatzline-ClockEntry.swift */; };
+		3D00956F1E03200C004E631A /* BrandonShegaClockEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D00956E1E03200C004E631A /* BrandonShegaClockEntry.swift */; };
 		809B704A1BF01B68004131BE /* LoganWrightEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B70491BF01B68004131BE /* LoganWrightEntry.swift */; };
 		9272E1AF1BD7F6560030B403 /* CodeChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9272E1A41BD7F6560030B403 /* CodeChallenge.framework */; };
 		9272E1E41BDED71C0030B403 /* LongestSubstringWithoutRepeatingCharactersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9272E1E31BDED71C0030B403 /* LongestSubstringWithoutRepeatingCharactersTests.swift */; };
@@ -52,6 +53,7 @@
 		1B9E11401E006A2B00B9FA5A /* BugKrushaClockEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BugKrushaClockEntry.swift; sourceTree = "<group>"; };
 		1B9E11451E006F0800B9FA5A /* ClockTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockTests.swift; sourceTree = "<group>"; };
 		2EB83A7F1E03290400FAAB32 /* EthanSchatzline-ClockEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EthanSchatzline-ClockEntry.swift"; sourceTree = "<group>"; };
+		3D00956E1E03200C004E631A /* BrandonShegaClockEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandonShegaClockEntry.swift; sourceTree = "<group>"; };
 		809B70491BF01B68004131BE /* LoganWrightEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoganWrightEntry.swift; sourceTree = "<group>"; };
 		9272E1A41BD7F6560030B403 /* CodeChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CodeChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9272E1AE1BD7F6560030B403 /* CodeChallenge.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeChallenge.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +113,7 @@
 				1B9E11401E006A2B00B9FA5A /* BugKrushaClockEntry.swift */,
 				1B31586E1E02FC7E0052ACBD /* FlavioSilverioClockEntry.swift */,
 				2EB83A7F1E03290400FAAB32 /* EthanSchatzline-ClockEntry.swift */,
+				3D00956E1E03200C004E631A /* BrandonShegaClockEntry.swift */,
 			);
 			path = Entries;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				1B31586F1E02FC7E0052ACBD /* FlavioSilverioClockEntry.swift in Sources */,
 				944CFCDB1BE7310B00FD2E41 /* LongestSubstringWithoutRepeatingCharactersChallenge.swift in Sources */,
 				1B1F0A4E1BE7EA060030135C /* BugKrushaLetterCombinationsOfPhoneNumberEntry.swift in Sources */,
+				3D00956F1E03200C004E631A /* BrandonShegaClockEntry.swift in Sources */,
 				94350F741BE5F04A003592FB /* IanKeen.swift in Sources */,
 				94350F761BE5F0F6003592FB /* Logan.swift in Sources */,
 				94350F721BE5EF9F003592FB /* BugKrusha.swift in Sources */,
