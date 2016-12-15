@@ -11,9 +11,10 @@ import Foundation
 private struct Constants {
     
     static let maxDegrees: Double = 360.0
-    static let maxHours: Double = 12.0
-    static let maxMinutes: Double = 60.0
-    static let maxSeconds: Double = 60.0
+    static let hourTenth: Double = 1.0 / 12.0
+    static let hourDegrees: Double = 30.0
+    static let secondMinuteTenth: Double = 1.0 / 60.0
+    static let secondMinuteDegrees: Double = 6.0
 }
 
 let ethanSchatzlineClockEntry = CodeChallengeEntry<ClockChallenge>(name: "ethan.schatzline") {  input in
@@ -26,9 +27,19 @@ let ethanSchatzlineClockEntry = CodeChallengeEntry<ClockChallenge>(name: "ethan.
         let second = Double(components[2])
         else { fatalError("Bad input") }
     
-    let hourAngle = Int((hour / Constants.maxHours) * Constants.maxDegrees)
-    let minuteAngle = Int((minute / Constants.maxMinutes) * Constants.maxDegrees)
-    let secondAngle = Int((second / Constants.maxSeconds) * Constants.maxDegrees)
+    let secondPercentage = second * Constants.secondMinuteTenth
+    let minutePercentage = minute * Constants.secondMinuteTenth
+    let hourPercentage = hour * Constants.hourTenth
+    
+    let secondAngle = Int(secondPercentage * Constants.maxDegrees)
+    
+    let minuteDegree = minutePercentage * Constants.maxDegrees
+    let minuteOffset = secondPercentage * Constants.secondMinuteDegrees
+    let minuteAngle = Int(minuteDegree + minuteOffset)
+    
+    let hourDegree = hourPercentage * Constants.maxDegrees
+    let hourOffset = minutePercentage * Constants.hourDegrees
+    let hourAngle = Int(hourDegree + hourOffset)
     
     return (hourAngle, minuteAngle, secondAngle)
 }
