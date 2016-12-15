@@ -33,6 +33,7 @@ struct ClockChallenge: CodeChallengeType {
     var entries: [CodeChallengeEntry<ClockChallenge>] = [
         bugKrushaClockEntry,
         FlavioSilverioClockEntry,
+        ethanSchatzlineClockEntry,
         brandonShegaClockEntry
     ]
     
