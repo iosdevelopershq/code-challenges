@@ -1,30 +1,34 @@
 import Foundation
 
 let brandonShegaClockEntry = CodeChallengeEntry<ClockChallenge>(name: "brandonshega") { input in
-  let df = DateFormatter()
-  df.dateFormat = "HH:MM:SS"
-  guard let date = df.date(from: input) else { return (0, 0, 0) }
-  let dateComps = Calendar.current.dateComponents([.hour, .minute, .second], from: date)
-  return dateComps.handsInAngles
+  let clock = Clock(for: input)
+  return clock.timeInAngles
 }
 
-fileprivate extension DateComponents {
-  var hoursToAngle: Int {
-    guard let hour = hour else { return 0 }
-    return hour * 30
+fileprivate struct Clock {
+  let hour: Double
+  let minute: Double
+  let second: Double
+
+  init(for date: String) {
+    let df = DateFormatter()
+    df.dateFormat = "hh:mm:ss"
+    guard let date = df.date(from: date) else { fatalError("Bad Time") }
+    let dateComps = Calendar.current.dateComponents([.hour, .minute, .second], from: date)
+    guard
+      let hour = dateComps.hour,
+      let minute = dateComps.minute,
+      let second = dateComps.second else { fatalError("Bad Time") }
+    self.hour = Double(hour)
+    self.minute = Double(minute)
+    self.second = Double(second)
   }
 
-  var minutesToAngle: Int {
-    guard let minute = minute else { return 0 }
-    return minute * 6
-  }
-
-  var secondsToAngle: Int {
-    guard let second = second else { return 0 }
-    return second * 6
-  }
-
-  var handsInAngles: (Int, Int, Int) {
+  var timeInAngles: (Int, Int, Int) {
+    let hoursToAngle = Int(hour * 30 + (minute/60 * 30))
+    let minutesToAngle = Int(minute * 6 + (second/60 * 6))
+    let secondsToAngle = Int(second * 6)
     return (hoursToAngle, minutesToAngle, secondsToAngle)
   }
+
 }
