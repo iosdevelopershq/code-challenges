@@ -14,7 +14,7 @@ private struct Constants {
     static let hourTenth: Double = 1.0 / 12.0
     static let hourDegrees: Double = 30.0
     static let secondMinuteTenth: Double = 1.0 / 60.0
-    static let secondMinuteDegrees: Double = 6.0
+    static let minuteDegrees: Double = 6.0
 }
 
 let ethanSchatzlineClockEntry = CodeChallengeEntry<ClockChallenge>(name: "ethan.schatzline") {  input in
@@ -34,7 +34,7 @@ let ethanSchatzlineClockEntry = CodeChallengeEntry<ClockChallenge>(name: "ethan.
     let secondAngle = Int(secondPercentage * Constants.maxDegrees)
     
     let minuteDegree = minutePercentage * Constants.maxDegrees
-    let minuteOffset = secondPercentage * Constants.secondMinuteDegrees
+    let minuteOffset = secondPercentage * Constants.minuteDegrees
     let minuteAngle = Int(minuteDegree + minuteOffset)
     
     let hourDegree = hourPercentage * Constants.maxDegrees
