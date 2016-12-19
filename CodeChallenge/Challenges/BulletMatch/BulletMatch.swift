@@ -68,3 +68,48 @@ private func rotate(markings: String, turns: Int) -> String {
     
     return prefix + suffix
 }
+
+
+fileprivate func generateMarkings(count: Int, length: Int) -> [(String, String)] {
+    let characters: [Character] = ["|", " "]
+    var verificationData =  [
+        // double check these
+        "| |||  |   |": ("| |||  |   |", true),
+        "| |||  |   |": ("||| |  |   |", false),
+        "|| ||| | ": (" | || |||", true)
+    ]
+    
+    var markings = [
+        ("| |||  |   |", "| |||  |   |"),
+        ("| |||  |   |", "||| |  |   |)"),
+        ("|| ||| | ", " | || |||")
+    ]
+    
+    for _ in 0..<count {
+        var markingA = ""
+        
+        for _ in 0..<length {
+            markingA.append(characters[rand(below: 2)])
+        }
+        var markingB = rotate(markings: markingA,
+                              turns: rand(below: markingA.characters.count))
+        
+        if rand(below: 2) == 0 {
+            markingB += "| "
+            
+            verificationData[markingA] = (markingB, false)
+            markings.append((markingA, markingB))
+            continue
+        }
+        verificationData[markingA] = (markingB, true)
+        markings.append((markingA, markingB))
+    }
+    return markings
+}
+
+private var verificationData = [String: (String, Bool)]()
+fileprivate func rand(below: Int) -> Int {
+    return Int(arc4random_uniform(2))
+}
+
+
