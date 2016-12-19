@@ -45,6 +45,7 @@ struct BulletChallenge: CodeChallengeType {
     func generateDataset() -> [(bulleteMarkings: String, gunMarkings: String)] {
         return generateMarkings(count: 1000, length: 7)
     }
+    
     func verifyOutput(_ output: Bool, forInput input: (bulleteMarkings: String, gunMarkings: String)) -> Bool {
         guard
             let vd = verificationData[input.1]
