@@ -33,3 +33,23 @@ Doesn't match, returns 0
 
 Problem adapted from http://bit.ly/2h57Wxe
 */
+
+struct BulletChallenge: CodeChallengeType {
+    typealias InputType = (bulleteMarkings: String, gunMarkings: String)
+    typealias OutputType = Int
+    
+    var title = "Bullet Challenge"
+    var entries: [CodeChallengeEntry<BulletChallenge>] = [
+    ]
+    
+    func generateDataset() -> [(bulleteMarkings: String, gunMarkings: String)] {
+        return generateMarkings(count: 1000, length: 7)
+    }
+    func verifyOutput(_ output: Int, forInput input: (bulleteMarkings: String, gunMarkings: String)) -> Bool {
+        guard
+            let _ = verificationData[input.1]
+            else { return output == 0 }
+        
+        return output == 1
+    }
+}
