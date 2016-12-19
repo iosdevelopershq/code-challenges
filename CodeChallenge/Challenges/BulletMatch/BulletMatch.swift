@@ -36,7 +36,7 @@ Problem adapted from http://bit.ly/2h57Wxe
 
 struct BulletChallenge: CodeChallengeType {
     typealias InputType = (bulleteMarkings: String, gunMarkings: String)
-    typealias OutputType = Int
+    typealias OutputType = Bool
     
     var title = "Bullet Challenge"
     var entries: [CodeChallengeEntry<BulletChallenge>] = [
@@ -45,7 +45,7 @@ struct BulletChallenge: CodeChallengeType {
     func generateDataset() -> [(bulleteMarkings: String, gunMarkings: String)] {
         return generateMarkings(count: 1000, length: 7)
     }
-    func verifyOutput(_ output: Int, forInput input: (bulleteMarkings: String, gunMarkings: String)) -> Bool {
+    func verifyOutput(_ output: Bool, forInput input: (bulleteMarkings: String, gunMarkings: String)) -> Bool {
         guard
             let vd = verificationData[input.1]
             else { return false }
