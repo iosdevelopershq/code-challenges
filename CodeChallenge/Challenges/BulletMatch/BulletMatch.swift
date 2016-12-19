@@ -47,12 +47,13 @@ struct BulletChallenge: CodeChallengeType {
     }
     func verifyOutput(_ output: Int, forInput input: (bulleteMarkings: String, gunMarkings: String)) -> Bool {
         guard
-            let _ = verificationData[input.1]
-            else { return output == 0 }
-        
-        return output == 1
+            let vd = verificationData[input.1]
+            else { return false }
+        return vd.1
     }
 }
+
+private var verificationData = [String: (String, Bool)]()
 
 /**
  Turns bullet markings around to mimic a rotated
@@ -107,7 +108,6 @@ fileprivate func generateMarkings(count: Int, length: Int) -> [(String, String)]
     return markings
 }
 
-private var verificationData = [String: (String, Bool)]()
 fileprivate func rand(below: Int) -> Int {
     return Int(arc4random_uniform(2))
 }
