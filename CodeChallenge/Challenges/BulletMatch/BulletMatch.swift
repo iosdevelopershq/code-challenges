@@ -53,3 +53,18 @@ struct BulletChallenge: CodeChallengeType {
         return output == 1
     }
 }
+
+/**
+ Turns bullet markings around to mimic a rotated
+ bullet.
+ */
+private func rotate(markings: String, turns: Int) -> String {
+    
+    guard turns != 0 else { return markings }
+    let offset = markings.index(markings.startIndex, offsetBy: turns)
+    
+    let prefix = markings.substring(from: offset)
+    let suffix = markings.substring(to: offset)
+    
+    return prefix + suffix
+}
