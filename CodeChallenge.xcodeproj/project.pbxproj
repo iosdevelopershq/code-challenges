@@ -35,6 +35,7 @@
 		9489866A1BE5CFB000D34976 /* CodeChallengeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948986691BE5CFB000D34976 /* CodeChallengeType.swift */; };
 		948986701BE5D28500D34976 /* ExampleCodeChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9489866F1BE5D28500D34976 /* ExampleCodeChallenge.swift */; };
 		94FB98CA1BE1B5D800228845 /* TwoSumChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FB98C91BE1B5D800228845 /* TwoSumChallenge.swift */; };
+		D5D15B361E0C966A00CC9B1C /* felixdumitClockEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D15B351E0C966A00CC9B1C /* felixdumitClockEntry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		948986691BE5CFB000D34976 /* CodeChallengeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeChallengeType.swift; sourceTree = "<group>"; };
 		9489866F1BE5D28500D34976 /* ExampleCodeChallenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleCodeChallenge.swift; sourceTree = "<group>"; };
 		94FB98C91BE1B5D800228845 /* TwoSumChallenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoSumChallenge.swift; sourceTree = "<group>"; };
+		D5D15B351E0C966A00CC9B1C /* felixdumitClockEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = felixdumitClockEntry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				2EB83A7F1E03290400FAAB32 /* EthanSchatzline-ClockEntry.swift */,
 				1B31586E1E02FC7E0052ACBD /* FlavioSilverioClockEntry.swift */,
 				7B925E511E05AFFF0009B0CD /* matthijsClockEntry.swift */,
+				D5D15B351E0C966A00CC9B1C /* felixdumitClockEntry.swift */,
 			);
 			path = Entries;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				94350F741BE5F04A003592FB /* IanKeen.swift in Sources */,
 				94350F761BE5F0F6003592FB /* Logan.swift in Sources */,
 				94350F721BE5EF9F003592FB /* BugKrusha.swift in Sources */,
+				D5D15B361E0C966A00CC9B1C /* felixdumitClockEntry.swift in Sources */,
 				809B704A1BF01B68004131BE /* LoganWrightEntry.swift in Sources */,
 				944CFCD81BE72B3C00FD2E41 /* LetterCombinationsOfPhoneNumberChallenge.swift in Sources */,
 				94350F691BE5EB90003592FB /* Aranasaurus.swift in Sources */,
