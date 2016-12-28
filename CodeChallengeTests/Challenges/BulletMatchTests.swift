@@ -10,6 +10,6 @@ import XCTest
 @testable import CodeChallenge
 class BulletMatchTests: CodeChallengeTestCase {
     func testBulletMatch() {
-        runTestsForChallenge(BulletChallenge)
+        runTestsForChallenge(BulletChallenge())
     }
 }
