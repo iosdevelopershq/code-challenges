@@ -14,11 +14,11 @@ these markings to a gun thought to used to fire the
 original bullet.
 
 Given two markings, one from a spent cartridge and the other
-from a suspected weapon, both as Strings, return 1 if they match
-and 0 if they don't.
+from a suspected weapon, both as Strings, return true if they match
+and false if they don't.
 
 EXAMPLES:
-Match, returns 1
+Match, returns true
 "| |||  |   |" and
 "| |||  |   |"
 
@@ -27,7 +27,7 @@ Your solution should account for the possible rotation of bullets.
 "|| ||| | " and
 " | || |||"
 
-Doesn't match, returns 0
+Doesn't match, returns false
 "| |||  |   |" and
 "||| |  |   |"
 
