@@ -35,38 +35,45 @@ Problem adapted from http://bit.ly/2h57Wxe
 */
 
 struct BulletChallenge: CodeChallengeType {
-    typealias InputType = (bulleteMarkings: String, gunMarkings: String)
+    typealias InputType = (bulletMarkings: String, gunMarkings: String)
     typealias OutputType = Bool
     
     var title = "Bullet Challenge"
+    
     var entries: [CodeChallengeEntry<BulletChallenge>] = [
+        bugKrushaBulletMatchEntry
     ]
     
-    func generateDataset() -> [(bulleteMarkings: String, gunMarkings: String)] {
-        return generateMarkings(count: 1000, length: 7)
+    func generateDataset() -> [(bulletMarkings: String, gunMarkings: String)] {
+        return generateMarkings(count: 15000, length: 15)
     }
     
-    func verifyOutput(_ output: Bool, forInput input: (bulleteMarkings: String, gunMarkings: String)) -> Bool {
+    func verifyOutput(_ output: Bool, forInput input: (bulletMarkings: String, gunMarkings: String)) -> Bool {
         guard
-            let vd = verificationData[input.1]
+            let vd = verificationData[input.bulletMarkings]
             else { return false }
-        return vd.1
+        return vd.1 == output
     }
 }
 
-private var verificationData = [String: (String, Bool)]()
+private var verificationData =  [
+    // double check these
+    "| |||  |   |": ("| |||  |   |", true),
+    "| |||  |  |": ("||| |  |   |", false),
+    "|| ||| | ": (" | || |||", true)
+]
 
 /**
  Turns bullet markings around to mimic a rotated
  bullet.
  */
-private func rotate(markings: String, turns: Int) -> String {
+private func rotate(marking: String, turns: Int) -> String {
     
-    guard turns != 0 else { return markings }
-    let offset = markings.index(markings.startIndex, offsetBy: turns)
+    guard turns != 0 else { return marking }
+    let offset = marking.index(marking.startIndex, offsetBy: turns)
     
-    let prefix = markings.substring(from: offset)
-    let suffix = markings.substring(to: offset)
+    let prefix = marking.substring(from: offset)
+    let suffix = marking.substring(to: offset)
     
     return prefix + suffix
 }
@@ -74,37 +81,35 @@ private func rotate(markings: String, turns: Int) -> String {
 
 fileprivate func generateMarkings(count: Int, length: Int) -> [(String, String)] {
     let characters: [Character] = ["|", " "]
-    var verificationData =  [
-        // double check these
-        "| |||  |   |": ("| |||  |   |", true),
-        "| |||  |   |": ("||| |  |   |", false),
-        "|| ||| | ": (" | || |||", true)
-    ]
     
     var markings = [
         ("| |||  |   |", "| |||  |   |"),
-        ("| |||  |   |", "||| |  |   |)"),
+        ("| |||  |  |", "||| |  |   |)"),
         ("|| ||| | ", " | || |||")
     ]
     
     for _ in 0..<count {
-        var markingA = ""
+        var bulletMarking = ""
         
         for _ in 0..<length {
-            markingA.append(characters[rand(below: 2)])
+            bulletMarking.append(characters[rand(below: 2)])
         }
-        var markingB = rotate(markings: markingA,
-                              turns: rand(below: markingA.characters.count))
+        
+        guard verificationData[bulletMarking] == nil else { continue }
+        var gunMarking = rotate(marking: bulletMarking,
+                              turns: rand(below: bulletMarking.characters.count))
+
         
         if rand(below: 2) == 0 {
-            markingB += "| "
+            gunMarking += "| "
             
-            verificationData[markingA] = (markingB, false)
-            markings.append((markingA, markingB))
+            verificationData[bulletMarking] = (gunMarking, false)
+            markings.append((bulletMarking, gunMarking))
             continue
         }
-        verificationData[markingA] = (markingB, true)
-        markings.append((markingA, markingB))
+        
+        verificationData[bulletMarking] = (gunMarking, true)
+        markings.append((bulletMarking, gunMarking))
     }
     return markings
 }
