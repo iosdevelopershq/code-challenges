@@ -21,20 +21,23 @@ let bugKrushaBulletMatchEntry = CodeChallengeEntry<BulletChallenge>(name: "bugKr
     var matches = 0
     
     let bulletMarks = input.0.characters.flatMap { String($0) }
-    let gunMarks = input.1.characters.flatMap { String($0) }
+    var gunMarks = input.1.characters.flatMap { String($0) }
     
-    while resets > 0  {
+    while resets >= 0 && gunIndex < count {
         if bulletMarks[bulletIndex] == gunMarks[gunIndex] {
             gunIndex += 1
             matches += 1
+            bulletIndex += 1
         } else {
+            let last = gunMarks.removeLast()
+            gunMarks = [last] + gunMarks
             gunIndex = 0
-            resets -= 1
+            bulletIndex = 0
             matches = 0
+            
+            resets -= 1
         }
         
-        bulletIndex += 1
-        bulletIndex %= count
         if matches == count { return true }
     }
     return false
