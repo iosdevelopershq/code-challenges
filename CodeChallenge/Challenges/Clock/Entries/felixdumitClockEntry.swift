@@ -36,7 +36,7 @@ let felixdumitClockEntry = CodeChallengeEntry<ClockChallenge>(name: "felix-dumit
         return (clockAngle(unit: .hours), clockAngle(unit: .minutes), clockAngle(unit: .seconds))
     
     } else {
-        return brandonShegaClockEntry.block(input)
+        fatalError("this solution is only available for iOS10")
     }
 }
 
