@@ -31,6 +31,10 @@ Your solution should account for the possible rotation of bullets.
 Doesn't match, returns false
 "| |||  |   |" and
 "||| |  |   |"
+ 
+ NOTE: Markings cannot be flipped. 
+ "| ||" is not a match for
+ "|| |"
 
 Problem adapted from http://bit.ly/2h57Wxe
 */
