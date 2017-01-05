@@ -10,8 +10,9 @@ import Foundation
 /**
 Forensic specialists examine spent cartridges for unique
 markings left by parts of a gun. They can then compare
-these markings to a gun thought to used to fire the
-original bullet.
+these markings to the ones in any gun to determine if there
+is a match. A match means that the bullet was fired from 
+that gun.
 
 Given two markings, one from a spent cartridge and the other
 from a suspected weapon, both as Strings, return true if they match
@@ -22,7 +23,7 @@ Match, returns true
 "| |||  |   |" and
 "| |||  |   |"
 
-Match, returns 1 though one is rotated. Bullets can be rotated.
+Match, returns true though one is rotated. Bullets can be rotated.
 Your solution should account for the possible rotation of bullets.
 "|| ||| | " and
 " | || |||"
@@ -34,88 +35,42 @@ Doesn't match, returns false
 Problem adapted from http://bit.ly/2h57Wxe
 */
 
-struct BulletChallenge: CodeChallengeType {
+final class BulletChallenge: CodeChallengeType {
     typealias InputType = (bulletMarkings: String, gunMarkings: String)
     typealias OutputType = Bool
     
     var title = "Bullet Challenge"
+    private let separator = "#"
     
     var entries: [CodeChallengeEntry<BulletChallenge>] = [
         bugKrushaBulletMatchEntry
     ]
     
-    func generateDataset() -> [(bulletMarkings: String, gunMarkings: String)] {
-        return generateMarkings(count: 15000, length: 15)
+    func generateDataset() -> [InputType] {
+        let bundle = Bundle(for: BulletChallenge.self)
+        guard
+            let dataUrl = bundle.url(forResource: "markings_short", withExtension: "json"),
+            let data = try? Data(contentsOf: dataUrl),
+            let jsonObjects = try? JSONSerialization.jsonObject(with: data, options: .allowFragments),
+            let vd = jsonObjects as? [String: Bool]
+            else { fatalError() }
+        
+        verificationData = vd
+        let markings = verificationData.keys.map { key -> (String, String) in
+            let components = key.components(separatedBy: self.separator)
+            let gunMarkings = components[1]
+            let bulletMarkings = components[0]
+            return (bulletMarkings: bulletMarkings, gunMarkings: gunMarkings)
+        }
+
+        return Array(markings)
     }
     
     func verifyOutput(_ output: Bool, forInput input: (bulletMarkings: String, gunMarkings: String)) -> Bool {
-        guard
-            let vd = verificationData[input.bulletMarkings]
-            else { return false }
-        return vd.1 == output
+        return verificationData[input.bulletMarkings + separator + input.gunMarkings] == output
     }
 }
 
-private var verificationData =  [
-    // double check these
-    "| |||  |   |": ("| |||  |   |", true),
-    "| |||  |  |": ("||| |  |   |", false),
-    "|| ||| | ": (" | || |||", true)
-]
-
-/**
- Turns bullet markings around to mimic a rotated
- bullet.
- */
-private func rotate(marking: String, turns: Int) -> String {
-    
-    guard turns != 0 else { return marking }
-    let offset = marking.index(marking.startIndex, offsetBy: turns)
-    
-    let prefix = marking.substring(from: offset)
-    let suffix = marking.substring(to: offset)
-    
-    return prefix + suffix
-}
-
-
-fileprivate func generateMarkings(count: Int, length: Int) -> [(String, String)] {
-    let characters: [Character] = ["|", " "]
-    
-    var markings = [
-        ("| |||  |   |", "| |||  |   |"),
-        ("| |||  |  |", "||| |  |   |)"),
-        ("|| ||| | ", " | || |||")
-    ]
-    
-    for _ in 0..<count {
-        var bulletMarking = ""
-        
-        for _ in 0..<length {
-            bulletMarking.append(characters[rand(below: 2)])
-        }
-        
-        guard verificationData[bulletMarking] == nil else { continue }
-        var gunMarking = rotate(marking: bulletMarking,
-                              turns: rand(below: bulletMarking.characters.count))
-
-        
-        if rand(below: 2) == 0 {
-            gunMarking += "| "
-            
-            verificationData[bulletMarking] = (gunMarking, false)
-            markings.append((bulletMarking, gunMarking))
-            continue
-        }
-        
-        verificationData[bulletMarking] = (gunMarking, true)
-        markings.append((bulletMarking, gunMarking))
-    }
-    return markings
-}
-
-fileprivate func rand(below: Int) -> Int {
-    return Int(arc4random_uniform(2))
-}
+private var verificationData = [String: Bool]()
 
 
