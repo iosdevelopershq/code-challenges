@@ -39,6 +39,8 @@
 		9489866A1BE5CFB000D34976 /* CodeChallengeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948986691BE5CFB000D34976 /* CodeChallengeType.swift */; };
 		948986701BE5D28500D34976 /* ExampleCodeChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9489866F1BE5D28500D34976 /* ExampleCodeChallenge.swift */; };
 		94FB98CA1BE1B5D800228845 /* TwoSumChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FB98C91BE1B5D800228845 /* TwoSumChallenge.swift */; };
+
+		B98954A51E200B9700335432 /* CodesmanBulletMatchEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98954A41E200B9700335432 /* CodesmanBulletMatchEntry.swift */; };
 		9572008E1E1F19F9006BB4D6 /* juliand665BulletMatchEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9572008D1E1F19F9006BB4D6 /* juliand665BulletMatchEntry.swift */; };
 		D5D15B361E0C966A00CC9B1C /* felixdumitClockEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D15B351E0C966A00CC9B1C /* felixdumitClockEntry.swift */; };
 /* End PBXBuildFile section */
@@ -89,7 +91,11 @@
 		948986691BE5CFB000D34976 /* CodeChallengeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeChallengeType.swift; sourceTree = "<group>"; };
 		9489866F1BE5D28500D34976 /* ExampleCodeChallenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleCodeChallenge.swift; sourceTree = "<group>"; };
 		94FB98C91BE1B5D800228845 /* TwoSumChallenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoSumChallenge.swift; sourceTree = "<group>"; };
+
+		B98954A41E200B9700335432 /* CodesmanBulletMatchEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CodesmanBulletMatchEntry.swift; path = BulletMatch/CodesmanBulletMatchEntry.swift; sourceTree = "<group>"; };
+
 		9572008D1E1F19F9006BB4D6 /* juliand665BulletMatchEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = juliand665BulletMatchEntry.swift; path = BulletMatch/Entries/juliand665BulletMatchEntry.swift; sourceTree = "<group>"; };
+
 		D5D15B351E0C966A00CC9B1C /* felixdumitClockEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = felixdumitClockEntry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,7 +131,9 @@
 			isa = PBXGroup;
 			children = (
 				1B49C04F1E0850D90094121E /* BugKrushaBulletMatchEntry.swift */,
+				B98954A41E200B9700335432 /* CodesmanBulletMatchEntry.swift */,
 				9572008D1E1F19F9006BB4D6 /* juliand665BulletMatchEntry.swift */,
+
 			);
 			name = Entries;
 			sourceTree = "<group>";
@@ -407,7 +415,10 @@
 				1B9E113F1E005A7C00B9FA5A /* Clock.swift in Sources */,
 				1B9E11411E006A2B00B9FA5A /* BugKrushaClockEntry.swift in Sources */,
 				94350F781BE5F174003592FB /* Mosab.swift in Sources */,
+
+				B98954A51E200B9700335432 /* CodesmanBulletMatchEntry.swift in Sources */,
 				9572008E1E1F19F9006BB4D6 /* juliand665BulletMatchEntry.swift in Sources */,
+
 				94FB98CA1BE1B5D800228845 /* TwoSumChallenge.swift in Sources */,
 				7B925E521E05AFFF0009B0CD /* matthijsClockEntry.swift in Sources */,
 				2EB83A801E03290400FAAB32 /* EthanSchatzline-ClockEntry.swift in Sources */,

@@ -48,6 +48,7 @@ final class BulletChallenge: CodeChallengeType {
     
     var entries: [CodeChallengeEntry<BulletChallenge>] = [
         bugKrushaBulletMatchEntry,
+        codesmanBulletMatchEntry
         juliand665BulletMatchEntry,
     ]
     
