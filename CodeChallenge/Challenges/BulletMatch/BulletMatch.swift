@@ -47,7 +47,8 @@ final class BulletChallenge: CodeChallengeType {
     private let separator = "#"
     
     var entries: [CodeChallengeEntry<BulletChallenge>] = [
-        bugKrushaBulletMatchEntry
+        bugKrushaBulletMatchEntry,
+        juliand665BulletMatchEntry,
     ]
     
     func generateDataset() -> [InputType] {
