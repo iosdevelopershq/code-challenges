@@ -30,7 +30,8 @@ struct LetterCombinationsOfPhoneNumberChallenge: CodeChallengeType {
     let entries: [CodeChallengeEntry<LetterCombinationsOfPhoneNumberChallenge>] = [
         // Put your Entry instance here!
         bugKrushaLetterCombinationOfPhoneNumberEntry,
-        LoganWrightLetterCombinationOfPhoneNumberEntry
+        LoganWrightLetterCombinationOfPhoneNumberEntry,
+        juliand665LetterCombinationOfPhoneNumberEntry
     ]
     
     func generateDataset() -> [InputType] {
