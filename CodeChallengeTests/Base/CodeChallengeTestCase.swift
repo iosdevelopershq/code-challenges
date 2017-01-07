@@ -44,13 +44,13 @@ class CodeChallengeTestCase: XCTestCase {
         }
         let maxNameLength = names.reduce(0) { max($0, $1.characters.count) }
 
-        for result in results {
+        for (i, result) in results.enumerated() {
             // Add spaces to the name to make the avg column line up with all results
-            var name = result.name
-            while name.characters.count < maxNameLength {
-                name.append(" ")
+            var nameAndNumber = names[i]
+            while nameAndNumber.characters.count < maxNameLength {
+                nameAndNumber.append(" ")
             }
-            print("\(name) avg: \(formatter.string(from: NSDecimalNumber(decimal: Decimal(result.averageTime)))!)s\ttotal: \(formatter.string(from: NSDecimalNumber(decimal: Decimal(result.totalTime)))!)s\t[\(result.successRate * 100)% success rate]")
+            print("\(nameAndNumber) avg: \(formatter.string(from: NSDecimalNumber(decimal: Decimal(result.averageTime)))!)s\ttotal: \(formatter.string(from: NSDecimalNumber(decimal: Decimal(result.totalTime)))!)s\t[\(result.successRate * 100)% success rate]")
         }
     }
 }
