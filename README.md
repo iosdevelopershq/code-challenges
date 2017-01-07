@@ -1,4 +1,4 @@
-# code-challenges [![Build Status](https://travis-ci.org/iosdevelopershq/code-challenges.svg?branch=AG%2FTravisSupport)](https://travis-ci.org/iosdevelopershq/code-challenges)
+# code-challenges [![Build Status](https://travis-ci.org/iosdevelopershq/code-challenges.svg?branch=master)](https://travis-ci.org/iosdevelopershq/code-challenges)
 Weekly(?) code challenges for the community to complete for learning and fun.
 
 # Submitting an Entry
@@ -27,6 +27,12 @@ Given that everybody's submissions all run in the same module and namespace it's
 
 * It's a great idea to have additional `functions` or data structures to use in your implementation but please, if you do, mark them `private` so that they don't pollute the global namespace.
 * Don't `print` _anything_. These will probably get flagged when you submit your PR, but save us a step and just don't commit 'em (or use custom breakpoints to do the trick ;) )! Currently we use the debug console from the test runs to output the results of the challenge runs, so the less console noise the better.
+
+If you're just wanting to submit entries to an existing challenge, you're done! The rest of this README is for folks wanting to create new challenges, if that's you... read on!
+
+
+
+---
 
 # Submitting a new Challenge
 
