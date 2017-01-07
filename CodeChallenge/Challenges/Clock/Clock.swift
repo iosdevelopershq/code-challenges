@@ -36,7 +36,8 @@ struct ClockChallenge: CodeChallengeType {
         ethanSchatzlineClockEntry,
         brandonShegaClockEntry,
         matthijsClockEntry,
-        felixdumitClockEntry
+        felixdumitClockEntry,
+        juliand665ClockEntry,
     ]
     
     func verifyOutput(_ output: (hourHandeAnlge: Int, minuteHandAngle: Int, secondHandAngle: Int), forInput input: String) -> Bool {

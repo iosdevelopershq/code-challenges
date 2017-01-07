@@ -22,13 +22,15 @@ struct LongestSubstringWithoutRepeatingCharactersChallenge: CodeChallengeType {
     let title = "Longest Substring Without Repeating Characters"
     
     let entries: [CodeChallengeEntry<LongestSubstringWithoutRepeatingCharactersChallenge>] = [
-        // Put your entry instance here!
+        juliand665LSWRCEntry
     ]
     
     func generateDataset() -> [InputType] {
         return [
             "abcabcbb",
-            "bbbbb"
+            "bbbbb",
+            "",
+            "jdjekjaoefeij"
         ]
     }
     
@@ -39,6 +41,8 @@ struct LongestSubstringWithoutRepeatingCharactersChallenge: CodeChallengeType {
     
     fileprivate let verificationDictionary = [
         "abcabcbb": 3,
-        "bbbbb": 1
+        "bbbbb": 1,
+        "": 0,
+        "jdjekjaoefeij": 6
     ]
 }
