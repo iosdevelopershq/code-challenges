@@ -33,27 +33,24 @@ class CodeChallengeTestCase: XCTestCase {
     }
     
     fileprivate func printResults<ChallengeType: CodeChallengeType>(_ results: [AccumulatedChallengeResult<ChallengeType>]) {
-        let maxNameLength = results.reduce(0) { max($0, $1.name.characters.count) }
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
         formatter.minimumFractionDigits = 5
         formatter.maximumFractionDigits = 5
 
-        for (i, accResult) in results.enumerated() {
-            var name = accResult.name
-            // try to make the results line up a bit by inserting the correct amount of tabs between the name and the avg based on the maximum name length vs this name's length
-            if name.characters.count < maxNameLength {
-                let diff = maxNameLength - name.characters.count
-                let tabWidth = 5
-                var tabsToInsert = Int(ceil(Double(diff)/Double(tabWidth)))
-                if diff % tabWidth == 0 {
-                    tabsToInsert += 1
-                }
-                for _ in 1...tabsToInsert {
-                    name.append(Character("\t"))
-                }
+        var names = [String]()
+        for (i, result) in results.enumerated() {
+            names.append("\(i+1). \(result.name)")
+        }
+        let maxNameLength = names.reduce(0) { max($0, $1.characters.count) }
+
+        for result in results {
+            // Add spaces to the name to make the avg column line up with all results
+            var name = result.name
+            while name.characters.count < maxNameLength {
+                name.append(" ")
             }
-            print("\(i+1). \(name)\t avg: \(formatter.string(from: NSDecimalNumber(decimal: Decimal(accResult.averageTime)))!)s\ttotal: \(formatter.string(from: NSDecimalNumber(decimal: Decimal(accResult.totalTime)))!)s\t[\(accResult.successRate * 100)% success rate]")
+            print("\(name) avg: \(formatter.string(from: NSDecimalNumber(decimal: Decimal(result.averageTime)))!)s\ttotal: \(formatter.string(from: NSDecimalNumber(decimal: Decimal(result.totalTime)))!)s\t[\(result.successRate * 100)% success rate]")
         }
     }
 }
