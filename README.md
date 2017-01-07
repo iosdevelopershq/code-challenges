@@ -1,4 +1,4 @@
-# code-challenges [![Build Status](https://travis-ci.org/iosdevelopershq/code-challenges.svg?branch=AG%2FTravisSupport)](https://travis-ci.org/iosdevelopershq/code-challenges)
+# code-challenges [![Build Status](https://travis-ci.org/iosdevelopershq/code-challenges.svg?branch=master)](https://travis-ci.org/iosdevelopershq/code-challenges)
 Weekly(?) code challenges for the community to complete for learning and fun.
 
 # Submitting an Entry
