@@ -21,7 +21,7 @@ let juliand665ClockEntry = CodeChallengeEntry<ClockChallenge>(name: "juliand665"
 }
 
 let juliand665ClockEntryNice = CodeChallengeEntry<ClockChallenge>(name: "juliand665 (swiftier)") { input in
-	let secs = input.components(separatedBy: ":").flatMap { Int($0) }.reduce(0) { $0 * 60 + $1 }
+	let secs = input.components(separatedBy: ":").flatMap { Int($0) }.reduce(0) { $0 * 60 + $1 } // @teevee's `scan` would be really nice here
 	
 	return (secs * 360 / 43200, (secs % 3600) * 360 / 3600, (secs % 60) * 360 / 60)
 }

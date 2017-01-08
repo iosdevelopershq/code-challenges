@@ -24,11 +24,15 @@ import Foundation
  Adapted from http://bit.ly/2gEBhRh
  */
 
-struct ClockChallenge: CodeChallengeType {
+final class ClockChallenge: JSONBasedChallenge {
     typealias InputType = String
-    typealias OutputType = (hourHandeAnlge: Int, minuteHandAngle: Int, secondHandAngle: Int)
+    typealias OutputType = (hourHandeAngle: Int, minuteHandAngle: Int, secondHandAngle: Int)
     
     var title = "Clock Challenge"
+    
+    // no `protected` access level (darn you, swift gods!)
+    let fileName = "Clock_dataset"
+    var verificationData: [String: Int] = [:]
     
     var entries: [CodeChallengeEntry<ClockChallenge>] = [
         bugKrushaClockEntry,
@@ -38,22 +42,27 @@ struct ClockChallenge: CodeChallengeType {
         matthijsClockEntry,
         felixdumitClockEntry,
         juliand665ClockEntry,
-    ]
+        ]
     
-    func verifyOutput(_ output: (hourHandeAnlge: Int, minuteHandAngle: Int, secondHandAngle: Int), forInput input: String) -> Bool {
-        guard
-            let value = verificationData[input],
-            value == output else { return false }
-        return true
+    // have to declare this explicitly because *of course* tuples are non-nominal and cannot be `Equatable`, despite being able to equate them
+    func verifyOutput(_ output: (hourHandeAngle: Int, minuteHandAngle: Int, secondHandAngle: Int), forInput input: String) -> Bool {
+        guard let expected = verificationData[input] else { return false }
+        return (expected >> 20, expected >> 10 & 0x3ff, expected & 0x3ff) == output
     }
-    
-    func generateDataset() -> [String] {
-        return ["06:00:00","08:30:00", "10:17:55"]
-    }
-    
-    private var verificationData = [
-        "06:00:00": (180, 0, 0),
-        "08:30:00": (255, 180, 0),
-        "10:17:55": (308, 107, 330)
-    ]
 }
+
+/* How I generated the dataset:
+
+func twoDigitString(from num: Int) -> String {
+    return num < 10 ? "0\(num)" : "\(num)"
+}
+
+for h in 0...43200 {
+    if arc4random_uniform(120) == 0 { // strip it down a little
+        let m = h % 60
+        let s = m % 60
+        print("\"\(twoDigitString(from: h / 3600)):\(twoDigitString(from: h / 60 % 60)):\(twoDigitString(from: h % 60))\": \((h * 360 / 43200) << 20 | (m * 360 / 3600) << 10 | s * 360 / 60),")
+    }
+}
+
+*/
