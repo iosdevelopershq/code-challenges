@@ -56,7 +56,7 @@ extension JSONBasedChallenge {
     
     func generateDataset() -> [InputType] {
         // Extract data from JSON file
-        let bundle = Bundle(for: BulletChallenge.self)
+        let bundle = Bundle(for: Self.self)
         guard let dataUrl = bundle.url(forResource: fileName, withExtension: "json"),
               let data = try? Data(contentsOf: dataUrl),
               let jsonObjects = try? JSONSerialization.jsonObject(with: data, options: .allowFragments),
