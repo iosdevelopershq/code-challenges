@@ -8,7 +8,9 @@
 
 import Foundation
 
-let juliand665ClockEntry = CodeChallengeEntry<ClockChallenge>(name: "juliand665") { input in
+let juliand665ClockEntry = CodeChallengeEntry<ClockChallenge>(name: "juliand665", block: anglesOfHands)
+
+private func anglesOfHands(at input: String) -> (Int, Int, Int) {
 	var time = input.components(separatedBy: ":").map { Int($0)! }
 	
 	time[2] *= 6
@@ -20,7 +22,7 @@ let juliand665ClockEntry = CodeChallengeEntry<ClockChallenge>(name: "juliand665"
 	return (time[0], time[1], time[2])
 }
 
-let juliand665ClockEntryNice = CodeChallengeEntry<ClockChallenge>(name: "juliand665 (swiftier)") { input in
+private func anglesOfHandsNice(at input: String) -> (Int, Int, Int) {
 	let secs = input.components(separatedBy: ":").flatMap { Int($0) }.reduce(0) { $0 * 60 + $1 } // @teevee's `scan` would be really nice here
 	
 	return (secs * 360 / 43200, (secs % 3600) * 360 / 3600, (secs % 60) * 360 / 60)

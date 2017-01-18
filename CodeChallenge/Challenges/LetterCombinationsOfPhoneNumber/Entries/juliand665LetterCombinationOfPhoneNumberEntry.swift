@@ -8,8 +8,9 @@
 
 import Foundation
 
-let juliand665LetterCombinationOfPhoneNumberEntry = CodeChallengeEntry<LetterCombinationsOfPhoneNumberChallenge>(name: "juliand665") { input in
-	
+let juliand665LetterCombinationOfPhoneNumberEntry = CodeChallengeEntry<LetterCombinationsOfPhoneNumberChallenge>(name: "juliand665", block: combinations)
+
+private func combinations(of input: String) -> [String] {
 	var combs: [String] = [""]
 	
 	let expanded = input.characters.flatMap { numbersToLetters[$0] }
