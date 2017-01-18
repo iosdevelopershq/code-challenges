@@ -41,8 +41,8 @@ final class ClockChallenge: JSONBasedChallenge {
         brandonShegaClockEntry,
         matthijsClockEntry,
         felixdumitClockEntry,
-        juliand665ClockEntry,
-        ]
+        juliand665ClockEntry
+    ]
     
     // have to declare this explicitly because *of course* tuples are non-nominal and cannot be `Equatable`, despite being able to equate them
     func verifyOutput(_ output: (hourHandeAngle: Int, minuteHandAngle: Int, secondHandAngle: Int), forInput input: String) -> Bool {

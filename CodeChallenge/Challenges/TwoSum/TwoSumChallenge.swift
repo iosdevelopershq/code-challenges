@@ -34,7 +34,7 @@ struct TwoSumChallenge: CodeChallengeType {
         mosabTwoSumEntry,
         nuudlesTwoSumEntry,
         juliand665TwoSumEntryFast,
-        juliand665TwoSumEntryUgly,
+        juliand665TwoSumEntryUgly
     ]
     
     func generateDataset() -> [InputType] {

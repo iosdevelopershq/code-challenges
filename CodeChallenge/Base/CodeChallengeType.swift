@@ -40,27 +40,64 @@ protocol CodeChallengeType {
     func verifyOutput(_ output: OutputType, forInput input: InputType) -> Bool
 }
 
+/**
+ Convenient protocol for defining challenges that verify entries using a JSON file.
+ 
+ Fields required by `JSONBasedChallenge`:
+ - `fileName`
+ - `verificationData`
+ 
+ Fields required by `CodeChallengeType`:
+ - `title`
+ - `entries`
+ - `InputType`
+ - `OutputType`
+ 
+ In most cases, this should take over `generateDataset` and `verifyOutput` for you.
+ The more your types are simple `String`s, the less methods you'll have to implement yourself.
+ */
 protocol JSONBasedChallenge: class, CodeChallengeType {
     
+    /// The type the output is encoded as in the JSON file. This can usually be inferred from methods you define; you shouldn't have to add it manually.
     associatedtype RawOutputType
     
+    /// The name of the JSON file. You shouldn't need to add any path components in here.
+    /// Recommended placement of the JSON file is in your challenge folder.
     var fileName: String { get }
     
+    /// You have to implement this yourself, since protocols can't store anything for you. The types should match those of the JSON file.
     var verificationData: [String: RawOutputType] { get set }
     
+    
+    /// Converts the JSON key into an input for the challenge. (Used for dataset generation.)
+    /// 
+    /// If your `InputType` is `String`, you don't have to implement this.
+    ///
+    /// - Parameter raw: Raw input from the JSON file
+    /// - Returns: Input to feed into entries
     func input(from raw: String) -> InputType
+    
+    /// Converts the challenge input back into raw JSON. (Used for output verification.)
+    /// 
+    /// If your `InputType` is `String`, you don't have to implement this.
+    ///
+    /// - Parameter input: Input used for the entry
+    /// - Returns: Raw input, as in the JSON file, to use for accessing `verificationData`
     func raw(from input: InputType) -> String
 }
+
+// Default Implementations
 
 extension JSONBasedChallenge {
     
     func generateDataset() -> [InputType] {
         // Extract data from JSON file
         let bundle = Bundle(for: Self.self)
-        guard let dataUrl = bundle.url(forResource: fileName, withExtension: "json"),
-              let data = try? Data(contentsOf: dataUrl),
-              let jsonObjects = try? JSONSerialization.jsonObject(with: data, options: .allowFragments),
-              let vd = jsonObjects as? [String: RawOutputType] else { fatalError() }
+        guard
+            let dataUrl = bundle.url(forResource: fileName, withExtension: "json"),
+            let data = try? Data(contentsOf: dataUrl),
+            let jsonObjects = try? JSONSerialization.jsonObject(with: data, options: .allowFragments),
+            let vd = jsonObjects as? [String: RawOutputType] else { fatalError() }
         
         verificationData = vd
         

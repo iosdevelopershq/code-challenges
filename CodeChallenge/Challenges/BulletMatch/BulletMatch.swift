@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 /**
  Forensic specialists examine spent cartridges for unique
  markings left by parts of a gun. They can then compare
@@ -38,7 +39,6 @@ import Foundation
  
  Problem adapted from http://bit.ly/2h57Wxe
  */
-
 final class BulletChallenge: JSONBasedChallenge {
     typealias InputType = (bulletMarkings: String, gunMarkings: String)
     typealias OutputType = Bool
@@ -52,8 +52,8 @@ final class BulletChallenge: JSONBasedChallenge {
     var entries: [CodeChallengeEntry<BulletChallenge>] = [
         bugKrushaBulletMatchEntry,
         codesmanBulletMatchEntry,
-        juliand665BulletMatchEntry,
-        ]
+        juliand665BulletMatchEntry
+    ]
     
     func input(from raw: String) -> InputType {
         let components = raw.components(separatedBy: "#")
