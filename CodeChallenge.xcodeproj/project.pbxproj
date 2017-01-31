@@ -17,6 +17,7 @@
 		1B9E11461E006F0800B9FA5A /* ClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E11451E006F0800B9FA5A /* ClockTests.swift */; };
 		2EB83A801E03290400FAAB32 /* EthanSchatzline-ClockEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB83A7F1E03290400FAAB32 /* EthanSchatzline-ClockEntry.swift */; };
 		3D00956F1E03200C004E631A /* BrandonShegaClockEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D00956E1E03200C004E631A /* BrandonShegaClockEntry.swift */; };
+		7B1BF2D01E3F9CFA00AEAC0E /* matthijsBulletMatchEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1BF2CF1E3F9CFA00AEAC0E /* matthijsBulletMatchEntry.swift */; };
 		7B925E521E05AFFF0009B0CD /* matthijsClockEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B925E511E05AFFF0009B0CD /* matthijsClockEntry.swift */; };
 		809B704A1BF01B68004131BE /* LoganWrightEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B70491BF01B68004131BE /* LoganWrightEntry.swift */; };
 		9272E1AF1BD7F6560030B403 /* CodeChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9272E1A41BD7F6560030B403 /* CodeChallenge.framework */; };
@@ -70,6 +71,7 @@
 		1B9E11451E006F0800B9FA5A /* ClockTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockTests.swift; sourceTree = "<group>"; };
 		2EB83A7F1E03290400FAAB32 /* EthanSchatzline-ClockEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EthanSchatzline-ClockEntry.swift"; sourceTree = "<group>"; };
 		3D00956E1E03200C004E631A /* BrandonShegaClockEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandonShegaClockEntry.swift; sourceTree = "<group>"; };
+		7B1BF2CF1E3F9CFA00AEAC0E /* matthijsBulletMatchEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = matthijsBulletMatchEntry.swift; path = BulletMatch/Entries/matthijsBulletMatchEntry.swift; sourceTree = "<group>"; };
 		7B925E511E05AFFF0009B0CD /* matthijsClockEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = matthijsClockEntry.swift; sourceTree = "<group>"; };
 		809B70491BF01B68004131BE /* LoganWrightEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoganWrightEntry.swift; sourceTree = "<group>"; };
 		9272E1A41BD7F6560030B403 /* CodeChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CodeChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +142,7 @@
 				957200A11E206A94006BB4D6 /* CodesmanBulletMatchEntry.swift */,
 				1B49C04F1E0850D90094121E /* BugKrushaBulletMatchEntry.swift */,
 				9572008D1E1F19F9006BB4D6 /* juliand665BulletMatchEntry.swift */,
+				7B1BF2CF1E3F9CFA00AEAC0E /* matthijsBulletMatchEntry.swift */,
 			);
 			name = Entries;
 			sourceTree = "<group>";
@@ -451,6 +454,7 @@
 				809B704A1BF01B68004131BE /* LoganWrightEntry.swift in Sources */,
 				944CFCD81BE72B3C00FD2E41 /* LetterCombinationsOfPhoneNumberChallenge.swift in Sources */,
 				94350F691BE5EB90003592FB /* Aranasaurus.swift in Sources */,
+				7B1BF2D01E3F9CFA00AEAC0E /* matthijsBulletMatchEntry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

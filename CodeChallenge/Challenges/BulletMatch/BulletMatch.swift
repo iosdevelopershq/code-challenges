@@ -52,7 +52,8 @@ final class BulletChallenge: JSONBasedChallenge {
     var entries: [CodeChallengeEntry<BulletChallenge>] = [
         bugKrushaBulletMatchEntry,
         codesmanBulletMatchEntry,
-        juliand665BulletMatchEntry
+        juliand665BulletMatchEntry,
+        matthijsBulletMatchEntry
     ]
     
     func input(from raw: String) -> InputType {
