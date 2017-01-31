@@ -50,6 +50,7 @@ final class BulletChallenge: CodeChallengeType {
         bugKrushaBulletMatchEntry,
         codesmanBulletMatchEntry,
         juliand665BulletMatchEntry,
+        matthijsBulletMatchEntry,
     ]
     
     func generateDataset() -> [InputType] {
