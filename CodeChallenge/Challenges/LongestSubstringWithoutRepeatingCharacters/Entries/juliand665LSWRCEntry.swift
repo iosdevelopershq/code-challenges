@@ -8,7 +8,9 @@
 
 import Foundation
 
-let juliand665LSWRCEntry = CodeChallengeEntry<LongestSubstringWithoutRepeatingCharactersChallenge>(name: "juliand665") { input in
+let juliand665LSWRCEntry = CodeChallengeEntry<LongestSubstringWithoutRepeatingCharactersChallenge>(name: "juliand665", block: lswrc)
+
+private func lswrc(in input: String) -> Int {
 	var chars: [Character] = []
 	var longest = 0
 	

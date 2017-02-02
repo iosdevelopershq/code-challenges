@@ -8,11 +8,13 @@
 
 import Foundation
 
+// MARK: - Challenge Definition
+
 /**
  Protocol for defining a new Challenge.
  
  This protocol defines the Input/Output types for the Entry's `block` property. HINT: Use a tuple for multiple inputs! It also defines the interface that whatever will run the challenges (currently our tests) uses to run the entries and verify their output.
-*/
+ */
 protocol CodeChallengeType {
     /// The type for the input(s) for the challenge.
     associatedtype InputType
@@ -27,16 +29,103 @@ protocol CodeChallengeType {
     
     /**
      A function to generate the dataset that the entries will be run against. Each `InputType` in the returned array will be run by each entry multiple times and then averaged in the results.
-    */
+     */
     func generateDataset() -> [InputType]
     
     /**
      A function which verifies the output from running an entry's block with the given input.
      
      - Returns: True if the output is valid, false if not.
-    */
+     */
     func verifyOutput(_ output: OutputType, forInput input: InputType) -> Bool
 }
+
+/**
+ Convenient protocol for defining challenges that verify entries using a JSON file.
+ 
+ Fields required by `JSONBasedChallenge`:
+ - `fileName`
+ - `verificationData`
+ 
+ Fields required by `CodeChallengeType`:
+ - `title`
+ - `entries`
+ - `InputType`
+ - `OutputType`
+ 
+ In most cases, this should take over `generateDataset` and `verifyOutput` for you.
+ The more your types are simple `String`s, the less methods you'll have to implement yourself.
+ */
+protocol JSONBasedChallenge: class, CodeChallengeType {
+    
+    /// The type the output is encoded as in the JSON file. This can usually be inferred from methods you define; you shouldn't have to add it manually.
+    associatedtype RawOutputType
+    
+    /// The name of the JSON file. You shouldn't need to add any path components in here.
+    /// Recommended placement of the JSON file is in your challenge folder.
+    var fileName: String { get }
+    
+    /// You have to implement this yourself, since protocols can't store anything for you. The types should match those of the JSON file.
+    var verificationData: [String: RawOutputType] { get set }
+    
+    
+    /// Converts the JSON key into an input for the challenge. (Used for dataset generation.)
+    /// 
+    /// If your `InputType` is `String`, you don't have to implement this.
+    ///
+    /// - Parameter raw: Raw input from the JSON file
+    /// - Returns: Input to feed into entries
+    func input(from raw: String) -> InputType
+    
+    /// Converts the challenge input back into raw JSON. (Used for output verification.)
+    /// 
+    /// If your `InputType` is `String`, you don't have to implement this.
+    ///
+    /// - Parameter input: Input used for the entry
+    /// - Returns: Raw input, as in the JSON file, to use for accessing `verificationData`
+    func raw(from input: InputType) -> String
+}
+
+// Default Implementations
+
+extension JSONBasedChallenge {
+    
+    func generateDataset() -> [InputType] {
+        // Extract data from JSON file
+        let bundle = Bundle(for: Self.self)
+        guard
+            let dataUrl = bundle.url(forResource: fileName, withExtension: "json"),
+            let data = try? Data(contentsOf: dataUrl),
+            let jsonObjects = try? JSONSerialization.jsonObject(with: data, options: .allowFragments),
+            let vd = jsonObjects as? [String: RawOutputType] else { fatalError() }
+        
+        verificationData = vd
+        
+        // Map key `String`s to `InputType`
+        return vd.keys.map { input(from: $0) }
+    }
+}
+
+extension JSONBasedChallenge where OutputType: Equatable, RawOutputType == OutputType {
+    
+    func verifyOutput(_ output: OutputType, forInput input: InputType) -> Bool {
+        guard let expected = verificationData[raw(from: input)] else { return false }
+        return expected == output
+    }
+}
+
+extension JSONBasedChallenge where InputType == String {
+    
+    func input(from raw: String) -> InputType {
+        return raw
+    }
+    
+    func raw(from input: InputType) -> String {
+        return input
+    }
+}
+
+// MARK: - Entry Definition
 
 /// An entry for a `CodeChallengeType`.
 struct CodeChallengeEntry<ChallengeType: CodeChallengeType> {
@@ -46,6 +135,8 @@ struct CodeChallengeEntry<ChallengeType: CodeChallengeType> {
     /// The block to be run to evaluate this entry.
     let block: (ChallengeType.InputType) -> ChallengeType.OutputType
 }
+
+// MARK: - Test Evaluation
 
 /// A structure to hold the result of a single run of an Entry's `block`.
 struct CodeChallengeResult<ChallengeType: CodeChallengeType> {
@@ -103,7 +194,7 @@ struct AccumulatedChallengeResult<ChallengeType: CodeChallengeType> {
     
     /**
      Create a new AccumulatedChallengeResult from the given set of results. The time properties will be calculated using the given parameters to this init.
-    */
+     */
     init(name: String, results: [CodeChallengeResult<ChallengeType>], successes: Int, failures: Int) {
         self.name = name
         self.results = results
@@ -133,7 +224,7 @@ extension CodeChallengeType {
      This function calls `generateDataset()` and then runs each input in the dataset through each entry in the `entries` multiple times, concurrently. It then processes all of the `CodeChallengeResult`s into `AcummulatedChallengeResult`s for each participant and returns them sorted by `totalTime`.
      
      - Returns: An array of `AcummulatedChallengeResult`s for each participant sorted by `averageTime`.
-    */
+     */
     func runAll() -> [AccumulatedResultType] {
         
         // Generate the dataset, everybody gets the same one

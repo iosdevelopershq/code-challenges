@@ -28,7 +28,6 @@ struct LetterCombinationsOfPhoneNumberChallenge: CodeChallengeType {
     let title = "Letter Combinations of Phone Number"
     
     let entries: [CodeChallengeEntry<LetterCombinationsOfPhoneNumberChallenge>] = [
-        // Put your Entry instance here!
         bugKrushaLetterCombinationOfPhoneNumberEntry,
         LoganWrightLetterCombinationOfPhoneNumberEntry,
         juliand665LetterCombinationOfPhoneNumberEntry
