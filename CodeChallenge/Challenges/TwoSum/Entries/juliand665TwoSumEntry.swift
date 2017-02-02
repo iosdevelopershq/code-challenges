@@ -8,8 +8,9 @@
 
 import Foundation
 
-let juliand665TwoSumEntryNice = CodeChallengeEntry<TwoSumChallenge>(name: "juliand665 (swiftier)") { (nums, target) in // O(log n)
-	
+let juliand665TwoSumEntryNice = CodeChallengeEntry<TwoSumChallenge>(name: "juliand665 (swiftier)", block: findPairNice)
+
+private func findPairNice(in nums: [Int], targeting target: Int) -> (Int, Int)? { // O(log n)
 	var numbers = nums.enumerated().sorted() { $0.1 < $1.1 } // I assume the closure is making it slower
 	var i1 = numbers.startIndex
 	var i2 = numbers.endIndex - 1
@@ -29,7 +30,9 @@ let juliand665TwoSumEntryNice = CodeChallengeEntry<TwoSumChallenge>(name: "julia
 	}
 }
 
-let juliand665TwoSumEntryFast = CodeChallengeEntry<TwoSumChallenge>(name: "juliand665 (swifter)") { (nums, target) in // O(log n)
+let juliand665TwoSumEntryFast = CodeChallengeEntry<TwoSumChallenge>(name: "juliand665 (swifter)", block: findPairFast)
+
+private func findPairFast(in nums: [Int], targeting target: Int) -> (Int, Int)? { // O(log n)
 	
 	var numbers = nums.sorted()
 	var i1 = numbers.startIndex
@@ -51,7 +54,9 @@ let juliand665TwoSumEntryFast = CodeChallengeEntry<TwoSumChallenge>(name: "julia
 	}
 }
 
-let juliand665TwoSumEntryUgly = CodeChallengeEntry<TwoSumChallenge>(name: "juliand665 (hardcoded)") { (nums, target) in // O(n)
+let juliand665TwoSumEntryUgly = CodeChallengeEntry<TwoSumChallenge>(name: "juliand665 (hardcoded)", block: findPairUgly)
+
+private func findPairUgly(in nums: [Int], targeting target: Int) -> (Int, Int)? { // O(n)
 	
 	var first: Int?
 	
