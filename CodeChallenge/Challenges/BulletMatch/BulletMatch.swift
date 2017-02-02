@@ -53,6 +53,7 @@ final class BulletChallenge: JSONBasedChallenge {
         bugKrushaBulletMatchEntry,
         codesmanBulletMatchEntry,
         juliand665BulletMatchEntry,
+        FlavioSilverioBulletMatchEntry,
         matthijsBulletMatchEntry
     ]
     

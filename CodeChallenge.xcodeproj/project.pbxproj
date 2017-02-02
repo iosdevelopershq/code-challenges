@@ -15,6 +15,7 @@
 		1B9E113F1E005A7C00B9FA5A /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E113E1E005A7C00B9FA5A /* Clock.swift */; };
 		1B9E11411E006A2B00B9FA5A /* BugKrushaClockEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E11401E006A2B00B9FA5A /* BugKrushaClockEntry.swift */; };
 		1B9E11461E006F0800B9FA5A /* ClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E11451E006F0800B9FA5A /* ClockTests.swift */; };
+		1BBAB4801E41D6190038BCB1 /* FlavioSilverioBulletMatchEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBAB47F1E41D6190038BCB1 /* FlavioSilverioBulletMatchEntry.swift */; };
 		2EB83A801E03290400FAAB32 /* EthanSchatzline-ClockEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB83A7F1E03290400FAAB32 /* EthanSchatzline-ClockEntry.swift */; };
 		3D00956F1E03200C004E631A /* BrandonShegaClockEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D00956E1E03200C004E631A /* BrandonShegaClockEntry.swift */; };
 		7B1BF2D01E3F9CFA00AEAC0E /* matthijsBulletMatchEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1BF2CF1E3F9CFA00AEAC0E /* matthijsBulletMatchEntry.swift */; };
@@ -69,6 +70,7 @@
 		1B9E113E1E005A7C00B9FA5A /* Clock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
 		1B9E11401E006A2B00B9FA5A /* BugKrushaClockEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BugKrushaClockEntry.swift; sourceTree = "<group>"; };
 		1B9E11451E006F0800B9FA5A /* ClockTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockTests.swift; sourceTree = "<group>"; };
+		1BBAB47F1E41D6190038BCB1 /* FlavioSilverioBulletMatchEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlavioSilverioBulletMatchEntry.swift; path = BulletMatch/Entries/FlavioSilverioBulletMatchEntry.swift; sourceTree = "<group>"; };
 		2EB83A7F1E03290400FAAB32 /* EthanSchatzline-ClockEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EthanSchatzline-ClockEntry.swift"; sourceTree = "<group>"; };
 		3D00956E1E03200C004E631A /* BrandonShegaClockEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandonShegaClockEntry.swift; sourceTree = "<group>"; };
 		7B1BF2CF1E3F9CFA00AEAC0E /* matthijsBulletMatchEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = matthijsBulletMatchEntry.swift; path = BulletMatch/Entries/matthijsBulletMatchEntry.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				957200A11E206A94006BB4D6 /* CodesmanBulletMatchEntry.swift */,
 				1B49C04F1E0850D90094121E /* BugKrushaBulletMatchEntry.swift */,
 				9572008D1E1F19F9006BB4D6 /* juliand665BulletMatchEntry.swift */,
+				1BBAB47F1E41D6190038BCB1 /* FlavioSilverioBulletMatchEntry.swift */,
 				7B1BF2CF1E3F9CFA00AEAC0E /* matthijsBulletMatchEntry.swift */,
 			);
 			name = Entries;
@@ -443,6 +446,7 @@
 				948986701BE5D28500D34976 /* ExampleCodeChallenge.swift in Sources */,
 				1B31586F1E02FC7E0052ACBD /* FlavioSilverioClockEntry.swift in Sources */,
 				9572009E1E206A5E006BB4D6 /* juliand665ClockEntry.swift in Sources */,
+				1BBAB4801E41D6190038BCB1 /* FlavioSilverioBulletMatchEntry.swift in Sources */,
 				944CFCDB1BE7310B00FD2E41 /* LongestSubstringWithoutRepeatingCharactersChallenge.swift in Sources */,
 				1B1F0A4E1BE7EA060030135C /* BugKrushaLetterCombinationsOfPhoneNumberEntry.swift in Sources */,
 				3D00956F1E03200C004E631A /* BrandonShegaClockEntry.swift in Sources */,
